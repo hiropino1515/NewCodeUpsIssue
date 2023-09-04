@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.button {
+  display: inline-block;
+  font-size: rem(14);
+  font-family: $second-font-family;
+  font-weight: $normal;
+  color: $base;
+  line-height: 1;
+  background-color: $main;
+  box-shadow: #fff 4px 4px 0 0,$main 4px 4px 0 1px;
+  padding: rem(20) 0;
+  width: rem(202);
+  text-align: center;
+}
+
+.button span {
+  margin-left: rem(8);
+  display: inline-block;
+  width: rem(40);
+  height: rem(6);
+  border-bottom: 1px solid $base;
+  border-right: 1px solid $base;
+  transform: skew(45deg);
+}

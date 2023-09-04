@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.card {
+  padding: rem(16);
+  background: $base;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card__image {
+  position: relative;
+}
+
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 66.777%;
+}
+
+.card__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__body {
+  margin-top: rem(24);
+}
+
+.card__body--date {
+  font-family: $second-font-family;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.card__body--title {
+  font-size: rem(18);
+  font-weight: 500;
+  font-family: $base-font-family;
+  line-height: 1.333;
+  position: relative;
+}
+
+.card__body--title::after {
+  content: "";
+  position: absolute;
+  bottom: rem(-4);
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: $main;
+}
+
+.card__body--text {
+  margin-top: rem(16);
+  font-size: rem(16);
+  font-weight: $normal;
+  font-family: $base-font-family;
+  line-height: 1.5;
+}
