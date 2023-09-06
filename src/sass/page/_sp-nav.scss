@@ -16,26 +16,39 @@
 }
 
 .sp-nav__items {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: rem(100) 0;
+  column-count: 2;
+  padding: rem(104) rem(15);
   min-height: 100vh;
   z-index: 300;
 }
 
 .sp-nav__item {
   width: 100%;
+  padding-left: rem(22);
+  background: url(/assets/images/common/hitode.png);
+  background-repeat: no-repeat;
+  background-size: rem(18) rem(18);
+  background-position: 0 rem(20);
 }
 
 .sp-nav__item a {
-  text-align: center;
+  text-align: left;
   display: block;
-  font-size: rem(15);
+  font-size: rem(16);
   color: $base;
+  font-family: $base-font-family;
   font-weight: $bold;
-  padding: rem(10) 0;
-  line-height: 1;
-  letter-spacing: 0.05em;
+  line-height: 1.125;
+  padding: rem(20) 0;
+}
+
+.sp-nav__item ul li a {
+  text-align: left;
+  display: block;
+  font-size: rem(16);
+  color: $base;
+  font-family: $base-font-family;
+  font-weight: normal;
+  line-height: 1.125;
+  padding: rem(12) 0;
 }

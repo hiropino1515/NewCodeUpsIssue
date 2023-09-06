@@ -4,8 +4,8 @@
   height: rem(80);
   width: 100%;
   background: rgba(13, 41, 54, 0.68);
-  // position: fixed;
-  // z-index: 1000;
+  position: fixed;
+  z-index: 1000;
 }
 
 .header__inner {
@@ -13,10 +13,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq("md") {
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
 }
 
 .header__logo img {
   width: rem(102);
+  z-index: 500;
 }
 
 .header__drawer {

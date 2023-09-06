@@ -1,9 +1,16 @@
 @use "global" as *;
 
 .card {
-  padding: rem(16);
   background: $base;
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card__inner{
+  padding: rem(16);
+}
+
+.card__wrapper {
+
 }
 
 .card__image {
@@ -13,7 +20,7 @@
 .card__image::before {
   content: "";
   display: block;
-  padding-top: 66.777%;
+  padding-top: 67%;
 }
 
 .card__image img {
@@ -26,18 +33,42 @@
   object-fit: cover;
 }
 
-.card__body {
-  margin-top: rem(24);
+.card__head {
+
 }
 
-.card__body--date {
+.card__category {
+  display: inline;
+  font-size: rem(12);
+  font-weight: normal;
+  font-family: $base-font-family;
+  color: $main;
+  line-height: 1.8333;
+  padding: rem(4) rem(12);
+  border: 1px solid $main;
+}
+
+.card__date {
+  display: inline;
   font-family: $second-font-family;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1;
+}
+
+.card__tag {
+  display: inline;
+  font-family: $base-font-family;
   font-size: rem(12);
   font-weight: $normal;
   line-height: 1.5;
 }
 
-.card__body--title {
+.card__heading {
+  margin-top: rem(4);
+}
+
+.card__title {
   font-size: rem(18);
   font-weight: 500;
   font-family: $base-font-family;
@@ -45,7 +76,7 @@
   position: relative;
 }
 
-.card__body--title::after {
+.card__title::after {
   content: "";
   position: absolute;
   bottom: rem(-4);
@@ -55,10 +86,51 @@
   background-color: $main;
 }
 
-.card__body--text {
+.card__body {
   margin-top: rem(16);
+}
+
+.card__text {
   font-size: rem(16);
   font-weight: $normal;
   font-family: $base-font-family;
   line-height: 1.5;
+}
+
+.card__menu {
+  margin-top: rem(8);
+  text-align: center;
+}
+
+.card__menu--title {
+  font-size: rem(14);
+  font-weight: $normal;
+  font-family: $base-font-family;
+  line-height: 1.5;
+}
+
+.card__price {
+  margin-top: rem(8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(16);
+}
+
+.card__price--before {
+  font-size: rem(20);
+  font-weight: $bold;
+  font-family: $second-font-family;
+  line-height: 1;
+  text-decoration-line: line-through;
+  text-decoration-color: #C94800;
+  text-decoration-style: solid;
+}
+
+.card__price--after {
+  font-size: rem(32);
+  font-weight: $bold;
+  font-family: $second-font-family;
+  line-height: 1;
+  color: $main;
 }

@@ -1,0 +1,41 @@
+@use 'global' as *;
+
+.footer {
+  background-color: $main;
+  padding-top: rem(48);
+  padding-bottom: rem(56);
+}
+
+.footer__logo {
+  width: rem(120);
+}
+
+.footer__sns {
+  margin-top: rem(16);
+  display: flex;
+  gap: rem(16);
+  align-items: center;
+}
+
+.footer__sns a {
+  width: rem(24);
+  height: rem(24);
+}
+
+.footer__sp-nav {
+  width: 100%;
+}
+
+.footer__sp-nav--items {
+  column-count: 2;
+  padding: rem(20) 0;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: rem(14);
+  font-weight: normal;
+  font-family: $second-font-family;
+  color: $base;
+  line-height: 1.5;
+}

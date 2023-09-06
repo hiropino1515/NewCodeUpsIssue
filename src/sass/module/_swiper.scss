@@ -1,0 +1,47 @@
+@use 'global' as *;
+
+.swiper__container {
+  position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+  @include mq('md') {
+    display: block;
+  }
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: rem(-75);
+  left: auto;
+  right: rem(340);
+  width: rem(80);
+  height: rem(80);
+  background-image: url(/assets/images/common/prev.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.swiper-button-next {
+  position: absolute;
+  top: rem(-75);
+  left: auto;
+  right: rem(200);
+  width: rem(80);
+  height: rem(80);
+  background-image: url(/assets/images/common/next.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
