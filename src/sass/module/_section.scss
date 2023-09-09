@@ -2,4 +2,7 @@
 
 .section {
   padding: rem(40) 0;
+  @include mq('md') {
+    padding: rem(100) 0;
+  }
 }

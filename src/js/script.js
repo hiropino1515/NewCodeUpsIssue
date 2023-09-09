@@ -24,7 +24,11 @@ var swiper = new Swiper(".js-campaign-swiper", {
   autoplay: {
     delay: 3000,
   },
-
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
   slidesPerView: 1.25,
   spaceBetween: 24,
 

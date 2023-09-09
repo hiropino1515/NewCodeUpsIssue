@@ -2,43 +2,54 @@
 
 .swiper__container {
   position: relative;
+  width: 100%;
+  padding-right: 0;
+  padding-left: $padding-sp;
+  margin-left: auto;
+  @include mq("md") {
+    // max-width: $inner + strip-unit($padding-pc) * 2;
+    max-width: 1350px;
+    padding-left: 0;
+    margin-left: rem(180);
+  }
 }
 
 .swiper-button-prev,
 .swiper-button-next {
   display: none;
+  position: absolute;
+  width: rem(80);
+  height: rem(80);
+  top: rem(-75);
+  left: auto;
   @include mq('md') {
     display: block;
   }
 }
 
 .swiper-button-prev {
-  position: absolute;
-  top: rem(-75);
-  left: auto;
   right: rem(340);
-  width: rem(80);
-  height: rem(80);
-  background-image: url(/assets/images/common/prev.png);
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .swiper-button-next {
-  position: absolute;
-  top: rem(-75);
-  left: auto;
   right: rem(200);
-  width: rem(80);
-  height: rem(80);
-  background-image: url(/assets/images/common/next.png);
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: rem(80);
+  height: rem(80);
+  display: block;
+}
+
+.swiper-button-prev::after {
+  content: url("/assets/images/common/prev.png");
+}
+
+.swiper-button-next::after {
+  content: url("/assets/images/common/next.png");
 }
 
 .swiper-slide img {

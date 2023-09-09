@@ -6,6 +6,13 @@
   padding-bottom: rem(56);
 }
 
+.footer__head {
+  @include mq('md') {
+    display: flex;
+    gap: rem(40);
+  }
+}
+
 .footer__logo {
   width: rem(120);
 }
@@ -29,6 +36,9 @@
 .footer__sp-nav--items {
   column-count: 2;
   padding: rem(20) 0;
+  @include mq('md') {
+    column-count: 4;
+  }
 }
 
 .footer__copyright {

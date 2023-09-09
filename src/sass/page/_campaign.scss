@@ -1,5 +1,12 @@
 @use 'global' as *;
 
+
+.campaign__inner {
+
+}
+
+
+
 .campaign__swiper {
   margin-top: rem(24);
   @include mq('md') {

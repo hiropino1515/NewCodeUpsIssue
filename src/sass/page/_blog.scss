@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.blog {
+  @include mq('md') {
+    position: relative;
+  }
+}
+
+.blog::before {
+  @include mq('md') {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url(/assets/images/common/blog-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -10;
+  }
+}
+
+.blog::after {
+  @include mq('md') {
+    content: "";
+    display: block;
+    position: absolute;
+    top: rem(24);
+    left: rem(100);
+    width: rem(437);
+    height: rem(201);
+    background-image: url(/assets/images/common/blog-tai.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.blog-header__entitle {
+  font-size: rem(32);
+  font-weight: normal;
+  font-family: $second-font-family;
+  color: $font;
+  line-height: 1.25;
+  @include mq('md') {
+    font-size: rem(40);
+    color: $base;
+  }
+}
+
+.blog-header__entitle::first-letter {
+  color: $main;
+  @include mq('md') {
+    color: $base;
+  }
+}
+
+.blog-header__jatitle {
+  margin-top: rem(4);
+  font-size: rem(12);
+  font-weight: normal;
+  font-family: $base-font-family;
+  color: $main;
+  line-height: 1.5;
+  @include mq('md') {
+    margin-top: rem(8);
+    color: $base;
+  }
+}
+
+.blog__items {
+  margin-top: rem(24);
+  @include mq('md') {
+    margin-top: rem(80);
+    display: flex;
+    align-items: center;
+    gap: rem(40);
+  }
+}
+
+.blog__item:not(:first-child) {
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: 0;
+  }
+}
