@@ -35,6 +35,7 @@
 
 .footer__sp-nav--items {
   column-count: 2;
+  column-gap: 0;
   padding: rem(20) 0;
   @include mq('md') {
     column-count: 4;

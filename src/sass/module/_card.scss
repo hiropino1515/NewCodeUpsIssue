@@ -17,6 +17,7 @@
 
 .card__image {
   position: relative;
+  width: 100%;
 }
 
 .card__image::before {
@@ -36,11 +37,11 @@
 }
 
 .card__head {
-
+  width: 100%;
 }
 
 .card__category {
-  display: inline;
+  display: inline-block;
   font-size: rem(12);
   font-weight: normal;
   font-family: $base-font-family;
@@ -51,7 +52,7 @@
 }
 
 .card__date {
-  display: inline;
+  display: inline-block;
   font-family: $second-font-family;
   font-size: rem(12);
   font-weight: $normal;
@@ -59,7 +60,7 @@
 }
 
 .card__tag {
-  display: inline;
+  display: block;
   font-family: $base-font-family;
   font-size: rem(12);
   font-weight: $normal;
