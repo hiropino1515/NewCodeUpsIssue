@@ -8,10 +8,20 @@
   color: $base;
   line-height: 1;
   background-color: $main;
-  box-shadow: #fff 4px 4px 0 0,$main 4px 4px 0 1px;
   padding: rem(20) 0;
   width: rem(202);
   text-align: center;
+  position: relative;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  bottom: rem(-4);
+  right: rem(-4);
+  width: 100%;
+  height: 100%;
+  border: 1px solid $main;
 }
 
 .button span {

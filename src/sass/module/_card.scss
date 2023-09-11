@@ -123,7 +123,7 @@
 .card__price--before {
   font-size: rem(20);
   font-weight: $bold;
-  font-family: $second-font-family;
+  font-family: $third-font-family;
   line-height: 1;
   text-decoration-line: line-through;
   text-decoration-color: #C94800;
@@ -133,7 +133,7 @@
 .card__price--after {
   font-size: rem(32);
   font-weight: $bold;
-  font-family: $second-font-family;
+  font-family: $third-font-family;
   line-height: 1;
   color: $main;
 }

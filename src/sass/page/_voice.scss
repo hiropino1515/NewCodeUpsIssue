@@ -1,9 +1,10 @@
 @use "global" as *;
 
 .voice {
+  padding-bottom: rem(80);
   @include mq('md') {
     position: relative;
-    padding-bottom: rem(140);
+    padding: rem(140) 0;
   }
 }
 
@@ -12,10 +13,10 @@
     content: "";
     display: block;
     position: absolute;
-    top: rem(-80);
+    top: rem(20);
     left: rem(100);
-    width: rem(301);
-    height: rem(137);
+    width: 20.9%;
+    height: 15.164%;
     background-image: url(/assets/images/common/voice-tai.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -29,17 +30,12 @@
     position: absolute;
     bottom: rem(73);
     right: rem(180);
-    width: rem(71);
-    height: rem(162);
+    width: 4.93%;
+    height: 17.8%;
     background-image: url(/assets/images/common/voice-tatu.png);
     background-size: contain;
     background-repeat: no-repeat;
   }
-}
-
-.voice-section {
-  padding-top: rem(40);
-  padding-bottom: rem(140);
 }
 
 .voice__image {

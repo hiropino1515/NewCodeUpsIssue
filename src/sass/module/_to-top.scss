@@ -1,0 +1,31 @@
+@use "global" as *;
+
+
+.to-top {
+  position: fixed;
+  right: rem(15);
+  bottom: rem(16);
+  overflow: hidden;
+  border-radius: 50%;
+}
+.to-top a {
+  display: block;
+  width: rem(48);
+  height: rem(48);
+  background-color: $base;
+  border: 1px solid $main;
+  border-radius: 50%;
+  transform: rotate(-90deg);
+  position: relative;
+}
+
+.to-top a span {
+  position: absolute;
+  width: rem(28);
+  height: rem(6);
+  border-bottom: 1px solid $main;
+  border-right: 1px solid $main;
+  top: 48%;
+  left: 45%;
+  transform: translate(-50%, -50%) skew(45deg);
+}

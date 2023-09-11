@@ -1,5 +1,37 @@
 @use "global" as *;
 
+.contact {
+  position: relative;
+}
+
+.contact::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: rem(54);
+  right: rem(15);
+  width: 29.1%;
+  height: 6.2%;
+  background-image: url(/assets/images/common/contact-fish.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include mq('md') {
+    background-image: url(/assets/images/common/contact-fish_pc.png);
+    top: rem(100);
+    right: rem(50);
+    width: 20.9%;
+    height: 19.3%;
+  }
+}
+
+.contact-section {
+  padding-top: rem(80);
+  padding-bottom: rem(100);
+  @include mq('md') {
+    padding-top: rem(140);
+    padding-bottom: rem(160);
+  }
+}
 .contact__inner {
   @include mq('md') {
     background: $base;
@@ -29,20 +61,41 @@
 }
 
 .contact__logo {
-  border-bottom: 1px solid $main;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact__logo img {
   display: block;
   width: rem(174);
-  height: auto;
-  color: $main;
+  height: rem(65);
+  @include mq('md') {
+    width: rem(200);
+    height: rem(75);
+  }
+}
+
+.contact__logo::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: rem(-6);
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $main;
+  @include mq('md') {
+    bottom: rem(-8);
+  }
 }
 
 .contact__info {
-  margin-top: rem(16);
+  margin-top: rem(22);
   @include mq('md') {
-    margin-top: rem(24);
+    margin-top: rem(32);
     display: flex;
     gap: rem(21);
   }

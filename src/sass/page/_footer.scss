@@ -33,12 +33,19 @@
   width: 100%;
 }
 
-.footer__sp-nav--items {
+.footer__sp-nav-items {
   column-count: 2;
   column-gap: 0;
   padding: rem(20) 0;
   @include mq('md') {
     column-count: 4;
+  }
+}
+
+.footer__sp-nav-mobile {
+  display: block;
+  @include mq('md') {
+    display: none;
   }
 }
 

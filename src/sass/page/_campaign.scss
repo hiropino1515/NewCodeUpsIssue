@@ -1,8 +1,14 @@
 @use 'global' as *;
-
+.campaign {
+  padding-top: rem(40);
+  @include mq('md') {
+    padding-top: rem(120);
+  }
+}
 
 .campaign__inner {
-
+  margin-right: auto;
+  margin-left: auto;
 }
 
 

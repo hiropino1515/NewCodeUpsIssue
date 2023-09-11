@@ -1,8 +1,10 @@
 @use "global" as *;
 
 .about {
+   padding: rem(40) 0;
   @include mq('md') {
     position: relative;
+    padding: rem(140) 0;
   }
 }
 
@@ -13,8 +15,8 @@
     position: absolute;
     right: rem(83);
     bottom: rem(50);
-    width: rem(194);
-    height: rem(181);
+    width: 13.472%;
+    height: 17.287%;
     background-image: url(/assets/images/common/about-us-isoginchaku.png);
     background-size: contain;
     background-repeat: no-repeat;

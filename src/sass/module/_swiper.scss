@@ -6,11 +6,9 @@
   padding-right: 0;
   padding-left: $padding-sp;
   margin-left: auto;
+  margin-right: auto;
   @include mq("md") {
-    // max-width: $inner + strip-unit($padding-pc) * 2;
-    max-width: 1350px;
-    padding-left: 0;
-    margin-left: rem(180);
+    padding-left: rem(180);
   }
 }
 
@@ -53,6 +51,6 @@
 }
 
 .swiper-slide img {
-  height: auto;
+  height: inherit;
   width: 100%;
 }
