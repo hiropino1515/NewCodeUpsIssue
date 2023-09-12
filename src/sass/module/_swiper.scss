@@ -16,9 +16,9 @@
 .swiper-button-next {
   display: none;
   position: absolute;
-  width: rem(80);
-  height: rem(80);
-  top: rem(-75);
+  width: 5.5%;
+  height: 9.8%;
+  top: rem(-100);
   left: auto;
   @include mq('md') {
     display: block;
@@ -37,8 +37,8 @@
 .swiper-button-next::after {
   background-repeat: no-repeat;
   background-size: contain;
-  width: rem(80);
-  height: rem(80);
+  width: 5.5%;
+  height: 9.8%;
   display: block;
 }
 

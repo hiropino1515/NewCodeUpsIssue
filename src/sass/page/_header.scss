@@ -8,6 +8,11 @@
   z-index: 1000;
 }
 
+.header:active {
+  background: #9A9A9A;
+  transition: all .1s;
+}
+
 .header__inner {
   height: inherit;
   display: flex;
@@ -19,7 +24,7 @@
   margin-right: auto;
   margin-left: auto;
   @include mq("md") {
-    padding-right: $padding-pc;
+    padding-right: rem(5);
     padding-left: $padding-pc;
   }
 }

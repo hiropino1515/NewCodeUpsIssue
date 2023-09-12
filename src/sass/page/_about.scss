@@ -2,6 +2,7 @@
 
 .about {
    padding: rem(40) 0;
+   margin-top: rem(10);
   @include mq('md') {
     position: relative;
     padding: rem(140) 0;

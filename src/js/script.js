@@ -27,6 +27,30 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
+  // グローバルナビメニューのリンクをクリックしたらページを閉じる
+  $(function () {
+    $(".js-sp-nav ul li a").on("click", function () {
+      $(".js-hamburger").removeClass('is-active');
+      $(".js-sp-nav").fadeOut(300);
+    });
+  });
+
+  // ヘッダーの高さ分下に下げてスクロール
+  $('a[href^="#"]').click(function() {
+    let header = $(".header").innerHeight();
+    let speed = 300;
+    let id = $(this).attr("href");
+    let target = $('#' == id ? "html" : id);
+    let position = $(target).offset().top - header;
+    $("html, body").animate(
+      {
+        scrollTop: position
+      },
+      speed
+    );
+    return false;
+  });
+
   var swiper = new Swiper(".js-mv-swiper", {
     // pagination: {
     //   el: ".js-works-paginations",
@@ -67,6 +91,33 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         spaceBetween: 41,
       },
     },
+  });
+
+  //要素の取得とスピードの設定
+  var box = $('.js-colorbox'),
+  speed = 700;
+
+  //.colorboxの付いた全ての要素に対して下記の処理を行う
+  box.each(function(){
+  $(this).append('<div class="is-color"></div>')
+  var color = $(this).find($('.is-color')),
+  image = $(this).find('img');
+  var counter = 0;
+
+  image.css('opacity','0');
+  color.css('width','0%');
+  //inviewを使って背景色が画面に現れたら処理をする
+  color.on('inview', function(){
+     if(counter == 0){
+       $(this).delay(200).animate({'width':'100%'},speed,function(){
+               image.css('opacity','1');
+               $(this).css({'left':'0' , 'right':'auto'});
+               $(this).animate({'width':'0%'},speed);
+            })
+        counter = 1;
+      }
+    });
+
   });
 
 });
