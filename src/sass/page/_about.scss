@@ -8,7 +8,8 @@
   padding: rem(80) 0;
   margin-top: rem(10);
  @include mq('md') {
-   padding: rem(140) 0;
+  padding-top: rem(140);
+  padding-bottom: rem(130);
  }
 }
 
@@ -115,6 +116,7 @@
 
 .about__button {
   margin-top: rem(50);
+  margin-left: rem(-12);
   text-align: center;
   @include mq('md') {
     margin-top: rem(40);

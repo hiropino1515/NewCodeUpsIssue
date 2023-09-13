@@ -28,7 +28,7 @@
 }
 
 .price__contents {
-  margin-top: rem(24);
+  margin-top: rem(32);
   @include mq('md') {
     margin-top: rem(40);
     display: flex;
@@ -37,40 +37,18 @@
   }
 }
 
-// .price__image {
-//   position: relative;
-//   width: 100%;
-// }
-
-// .price__image::before {
-//   content: "";
-//   display: block;
-//   padding-top: 65.8%;
-//   background-image: url(/assets/images/common/ocean3.jpg);
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   @include mq('md') {
-//     background-image: url(/assets/images/common/priceimg.jpg);
-//     height: rem(746);
-//   }
-// }
-
 .price__items {
   width: 100%;
 }
 
 .price__item {
-  margin-top: rem(40);
+  margin-top: rem(43);
 }
 
 .price__item:first-child {
   @include mq('md') {
     margin-top: 0;
   }
-}
-
-.price__course {
-
 }
 
 .price__course-wrapper {
@@ -98,5 +76,13 @@
   color: #0D2936;
   @include mq('md') {
     font-size: rem(16);
+  }
+}
+
+.price__button {
+  margin-top: rem(44);
+  text-align: center;
+  @include mq('md') {
+    margin-top: rem(80);
   }
 }

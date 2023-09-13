@@ -55,6 +55,7 @@
 }
 
 .card__date {
+  margin-top: rem(24);
   display: inline-block;
   font-family: $second-font-family;
   font-size: rem(12);
@@ -93,7 +94,7 @@
 }
 
 .card__body {
-  margin-top: rem(16);
+  margin-top: rem(18);
 }
 
 .card__text {
