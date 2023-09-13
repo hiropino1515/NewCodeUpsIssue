@@ -2,8 +2,13 @@
 
 .price {
   background-color: #DDF0F1;
+  position: relative;
+}
+
+.price__outer {
+  padding: rem(80) 0;
   @include mq('md') {
-    position: relative;
+    padding: rem(100) 0;
   }
 }
 
@@ -32,23 +37,23 @@
   }
 }
 
-.price__image {
-  position: relative;
-  width: 100%;
-}
+// .price__image {
+//   position: relative;
+//   width: 100%;
+// }
 
-.price__image::before {
-  content: "";
-  display: block;
-  padding-top: 65.8%;
-  background-image: url(/assets/images/common/ocean3.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  @include mq('md') {
-    background-image: url(/assets/images/common/priceimg.jpg);
-    height: rem(746);
-  }
-}
+// .price__image::before {
+//   content: "";
+//   display: block;
+//   padding-top: 65.8%;
+//   background-image: url(/assets/images/common/ocean3.jpg);
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   @include mq('md') {
+//     background-image: url(/assets/images/common/priceimg.jpg);
+//     height: rem(746);
+//   }
+// }
 
 .price__items {
   width: 100%;

@@ -6,6 +6,13 @@
   }
 }
 
+.blog__outer {
+  padding: rem(80) 0;
+  @include mq('md') {
+    padding: rem(100) 0;
+  }
+}
+
 .blog::before {
   @include mq('md') {
     content: "";
