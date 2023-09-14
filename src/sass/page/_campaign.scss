@@ -20,14 +20,40 @@
 .campaign__swiper {
   margin-top: rem(28);
   @include mq('md') {
-    margin-top: rem(40);
+    margin-top: rem(34);
   }
+}
+
+
+.campaign-card__inner {
+  padding: rem(16) rem(16) rem(24);
+  @include mq('md') {
+    padding: rem(26) rem(16) rem(40);
+  }
+}
+
+.campaign-card__title {
+  font-size: rem(18);
+  font-weight: 500;
+  font-family: $base-font-family;
+  line-height: 1.333;
+  position: relative;
+}
+
+.campaign-card__title::after {
+  content: "";
+  position: absolute;
+  bottom: rem(-8);
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: $main;
 }
 
 .campaign__button {
   margin-top: rem(32);
   text-align: center;
   @include mq('md') {
-    margin-top: rem(80);
+    margin-top: rem(70);
   }
 }

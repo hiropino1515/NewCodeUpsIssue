@@ -8,7 +8,8 @@
 .price__outer {
   padding: rem(80) 0;
   @include mq('md') {
-    padding: rem(100) 0;
+    padding-top: rem(100);
+    padding-bottom: rem(105);
   }
 }
 
@@ -43,12 +44,19 @@
 
 .price__item {
   margin-top: rem(43);
+  @include mq('md') {
+    margin-top: rem(34);
+  }
 }
 
 .price__item:first-child {
   @include mq('md') {
     margin-top: 0;
   }
+}
+
+.price-card__heading {
+  margin-top: 0;
 }
 
 .price__course-wrapper {
@@ -83,6 +91,6 @@
   margin-top: rem(44);
   text-align: center;
   @include mq('md') {
-    margin-top: rem(80);
+    margin-top: rem(72);
   }
 }

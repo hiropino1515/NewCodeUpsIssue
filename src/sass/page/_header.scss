@@ -6,6 +6,9 @@
   background: rgba(13, 41, 54, 0.68);
   position: fixed;
   z-index: 1000;
+  @include mq('md') {
+    height: rem(90);
+  }
 }
 
 .header:active {
@@ -24,8 +27,8 @@
   margin-right: auto;
   margin-left: auto;
   @include mq("md") {
-    padding-right: rem(5);
-    padding-left: $padding-pc;
+    padding-right: rem(20);
+    padding-left: rem(40);
   }
 }
 
@@ -33,6 +36,9 @@
   position: relative;
   width: rem(102);
   z-index: 500;
+  @include mq('md') {
+    width: rem(133);
+  }
 }
 
 .header__drawer {

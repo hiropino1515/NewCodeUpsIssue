@@ -7,7 +7,7 @@
 .voice__outer {
   padding-bottom: rem(80);
   @include mq('md') {
-    padding-top: rem(40);
+    padding-top: rem(140);
     padding-bottom: rem(140);
   }
 }
@@ -42,16 +42,21 @@
   }
 }
 
+.voice-card__head {
+  width: 100%;
+  margin-top: rem(16);
+}
+
 .voice__meta {
   @include mq('md') {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
   }
 }
 
 .voice__heading {
-  margin-top: rem(9);
+  margin-top: rem(16);
 }
 
 .voice__title {
@@ -84,7 +89,7 @@
 
 .voice__wrapper {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: row-reverse;
   gap: rem(13);
   @include mq('md') {
@@ -111,6 +116,10 @@
 
 .voice__image {
   margin-top: rem(6);
+  @include mq('md') {
+    margin-top: 0;
+    width: rem(305);
+  }
 }
 
 .voice__body {
@@ -131,6 +140,6 @@
   margin-top: rem(40);
   text-align: center;
   @include mq('md') {
-    margin-top: rem(80);
+    margin-top: rem(70);
   }
 }

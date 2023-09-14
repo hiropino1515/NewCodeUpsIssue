@@ -27,8 +27,5 @@
   font-family: $base-font-family;
   color: $main;
   line-height: 1.5;
-  @include mq('md') {
-    margin-top: rem(8);
-  }
 }
 

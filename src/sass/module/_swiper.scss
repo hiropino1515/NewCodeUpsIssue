@@ -18,7 +18,7 @@
   position: absolute;
   width: 5.5%;
   height: 9.8%;
-  top: rem(-100);
+  top: rem(-80);
   left: auto;
   @include mq('md') {
     display: block;
@@ -30,7 +30,7 @@
 }
 
 .swiper-button-next {
-  right: rem(200);
+  right: rem(180);
 }
 
 .swiper-button-prev::after,

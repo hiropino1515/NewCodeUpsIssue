@@ -50,7 +50,7 @@
   font-family: $base-font-family;
   color: $main;
   line-height: 1.8333;
-  padding: rem(4) rem(12);
+  padding: rem(4) rem(16);
   border: 1px solid $main;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .card__title {
-  font-size: rem(18);
+  font-size: rem(16);
   font-weight: 500;
   font-family: $base-font-family;
   line-height: 1.333;
@@ -94,7 +94,7 @@
 }
 
 .card__body {
-  margin-top: rem(18);
+  margin-top: rem(20);
 }
 
 .card__text {
@@ -105,7 +105,7 @@
 }
 
 .card__menu {
-  margin-top: rem(8);
+  margin-top: rem(28);
   text-align: center;
 }
 
@@ -120,12 +120,12 @@
   margin-top: rem(8);
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: space-around;
   gap: rem(16);
 }
 
 .card__price--before {
-  font-size: rem(20);
+  font-size: rem(24);
   font-weight: $bold;
   font-family: $third-font-family;
   line-height: 1;
@@ -135,7 +135,7 @@
 }
 
 .card__price--after {
-  font-size: rem(32);
+  font-size: rem(40);
   font-weight: $bold;
   font-family: $third-font-family;
   line-height: 1;

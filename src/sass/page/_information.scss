@@ -7,7 +7,8 @@
 .information__outer {
   padding: rem(80) 0;
   @include mq('md') {
-    padding: rem(100) 0;
+    padding-top: rem(95);
+    padding-bottom: rem(98);
   }
 }
 
@@ -15,28 +16,35 @@
   @include mq('md') {
     display: flex;
     align-items: center;
-    gap: rem(48);
+    gap: rem(40);
   }
 }
 
 .information__wrapper {
   margin-top: rem(24);
   @include mq('md') {
-    margin-top: rem(40);
+    margin-top: rem(36);
     width: 100%;
+  }
+}
+
+.information__image {
+  @include mq('md') {
+  width: rem(540);
   }
 }
 
 .information__content {
   margin-top: rem(24);
   @include mq('md') {
-    margin-top: 0;
+    margin-top: rem(24);
+    padding-left: rem(8);
     width: 100%;
   }
 }
 
 .information__title {
-  font-size: rem(20);
+  font-size: rem(24);
   font-weight: $bold;
   font-family: $base-font-family;
   line-height: 1.2;
@@ -46,7 +54,7 @@
 .information__title::after {
   content: "";
   position: absolute;
-  bottom: rem(-4);
+  bottom: rem(-8);
   left: 0;
   right: 0;
   height: 1px;
@@ -54,7 +62,7 @@
 }
 
 .information__text {
-  margin-top: rem(8);
+  margin-top: rem(16);
   font-size: rem(16);
   font-weight: $normal;
   font-family: $base-font-family;
