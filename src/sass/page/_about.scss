@@ -5,7 +5,8 @@
 }
 
 .about__outer {
-  padding: rem(80) 0;
+  padding-top: rem(72);
+  padding-bottom: rem(76);
   margin-top: rem(10);
  @include mq('md') {
   padding-top: rem(128);
@@ -33,7 +34,7 @@
 }
 
 .about__images {
-  margin-top: rem(24);
+  margin-top: rem(28);
   @include mq('md') {
     margin-top: rem(40);
   }
@@ -99,8 +100,11 @@
 
 .about__content {
   width: 100%;
-  padding-right: rem(40);
-  margin-top: rem(32);
+  margin-top: rem(16);
+  @include mq('md') {
+    margin-top: rem(32);
+    padding-right: rem(40);
+  }
 }
 
 .about__text {

@@ -7,6 +7,9 @@
   bottom: rem(16);
   overflow: hidden;
   border-radius: 50%;
+  @include mq('md') {
+    right: rem(20);
+  }
 }
 .to-top a {
   display: block;
@@ -17,6 +20,10 @@
   border-radius: 50%;
   transform: rotate(-90deg);
   position: relative;
+  @include mq('md') {
+    width: rem(80);
+    height: rem(80);
+  }
 }
 
 .to-top a span {
@@ -28,4 +35,13 @@
   top: 48%;
   left: 45%;
   transform: translate(-50%, -50%) skew(45deg);
+  @include mq('md') {
+    width: rem(40);
+    height: rem(8);
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
 }

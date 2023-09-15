@@ -5,10 +5,11 @@
 }
 
 .voice__outer {
-  padding-bottom: rem(80);
+  padding-top: rem(84);
+  padding-bottom: rem(84);
   @include mq('md') {
     padding-top: rem(140);
-    padding-bottom: rem(140);
+    padding-bottom: rem(142);
   }
 }
 
@@ -44,7 +45,10 @@
 
 .voice-card__head {
   width: 100%;
-  margin-top: rem(16);
+  margin-top: rem(-4);
+  @include mq('md') {
+    margin-top: rem(16);
+  }
 }
 
 .voice__meta {
@@ -56,7 +60,10 @@
 }
 
 .voice__heading {
-  margin-top: rem(16);
+  margin-top: rem(8);
+  @include mq('md') {
+    margin-top: rem(16);
+  }
 }
 
 .voice__title {
@@ -98,7 +105,7 @@
 }
 
 .voice__items {
-  margin-top: rem(47);
+  margin-top: rem(44);
   @include mq('md') {
     margin-top: rem(30);
     display: flex;
