@@ -23,16 +23,18 @@
 .mv__title {
   font-size: rem(40);
   font-weight: normal;
-  font-family: $base-font-family;
+  font-family: $third-font-family;
   line-height: 1.2;
   text-align: center;
-  letter-spacing: 0.58em;
+  letter-spacing: 0.5em;
   margin-left: 0.5em;
   color: $base;
   text-transform: uppercase;
   @include mq('md') {
     font-size: rem(80);
     line-height: 1.25;
+    letter-spacing: 0.5em;
+    margin-left: 0.5em;
   }
 }
 

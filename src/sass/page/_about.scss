@@ -6,7 +6,7 @@
 
 .about__outer {
   padding-top: rem(72);
-  padding-bottom: rem(76);
+  padding-bottom: rem(72);
   margin-top: rem(10);
  @include mq('md') {
   padding-top: rem(128);
@@ -114,7 +114,6 @@
   color: #0D2936;
   line-height: 1.5;
   @include mq('md') {
-    margin-top: 8;
     color: $base;
   }
 }
