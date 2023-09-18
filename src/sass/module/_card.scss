@@ -6,6 +6,10 @@
   z-index: 1;
 }
 
+.card:hover {
+  opacity: .6;
+}
+
 .card__outer {
   margin-bottom: rem(10);
 }

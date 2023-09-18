@@ -46,6 +46,10 @@
   }
 }
 
+.blog__inner {
+  max-width: rem(600);
+}
+
 .blog-header__entitle {
   font-size: rem(32);
   font-weight: normal;
@@ -62,19 +66,6 @@
   color: $main;
   @include mq('md') {
     color: $base;
-  }
-}
-
-.blog__inner {
-  width: 100%;
-  padding-right: rem(21);
-  padding-left:rem(21);
-  margin-right: auto;
-  margin-left: auto;
-  @include mq("md") {
-    max-width: $inner + strip-unit($padding-pc) * 2;
-    padding-right: $padding-pc;
-    padding-left: $padding-pc;
   }
 }
 

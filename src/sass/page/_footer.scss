@@ -13,6 +13,10 @@
   }
 }
 
+.footer__inner {
+  max-width: rem(600);
+}
+
 .footer__head {
   @include mq('md') {
     display: flex;
@@ -25,6 +29,10 @@
   @include mq('md') {
     width: rem(200);
   }
+}
+
+.footer__logo a:hover {
+  opacity: .6;
 }
 
 .footer__sns {
@@ -41,6 +49,10 @@
     width: rem(32);
     height: rem(20);
   }
+}
+
+.footer__sns a:hover {
+  opacity: .6;
 }
 
 .footer__sp-nav {
@@ -87,6 +99,10 @@
   @include mq('md') {
     padding: rem(20) 0;
   }
+}
+
+.footer__sp-nav-item a:hover {
+  opacity: .6;
 }
 
 .footer__sp-nav-item ul li a {

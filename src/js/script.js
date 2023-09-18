@@ -95,15 +95,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     spaceBetween: 24,
 
     breakpoints: {
-      // ウィンドウサイズが767px以下
-      767: {
-        slidesPerView: 1.25,
-        spaceBetween: 24,
-      },
-
       768: {
         slidesPerView: 3.5,
-        spaceBetween: 41,
+        spaceBetween: 40,
       },
     },
   });
@@ -134,5 +128,4 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
   });
-
 });
