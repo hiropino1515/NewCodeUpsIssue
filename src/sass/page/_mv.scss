@@ -3,9 +3,6 @@
 .mv {
   position: relative;
   height: 100vh;
-  @include mq('md') {
-    height: rem(768);
-  }
 }
 
 .mv__inner {
@@ -47,8 +44,12 @@
   color: $base;
 }
 
-.mv__swiper-slide img {
-  object-fit: cover;
-  height: 100vh;
+.mv__swiper {
   width: 100%;
+  height: 100vh;
+}
+.mv__swiper-slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 }

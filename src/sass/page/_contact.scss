@@ -51,6 +51,7 @@
 .contact__content--left {
   width: 100%;
   @include mq('md') {
+    padding-left: rem(50);
     padding-right: rem(82);
     border-right: 1px solid $main;
   }
@@ -58,6 +59,9 @@
 
 .contact__content--right {
   width: 100%;
+  @include mq('md') {
+    padding-right: rem(50);
+  }
 }
 
 .contact__logo {

@@ -1,34 +1,46 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-  let topBtn = $('.to-top');
-  topBtn.hide();
-
-  // ボタンの表示設定
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
-    }
+  // ページトップボタン
+  $(function () {
+    const pageTop = $("#to-top");
+    pageTop.hide();
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        pageTop.fadeIn();
+      } else {
+        pageTop.fadeOut();
+      }
+    });
+    pageTop.click(function () {
+      $("body,html").animate(
+        {
+          scrollTop: 0,
+        },
+        500
+      );
+      return false;
+    });
+    // フッター手前でストップ
+    $("#to-top").hide();
+    $(window).on("scroll", function () {
+      var scrollHeight = $(document).height();
+      var scrollPosition = $(window).height() + $(window).scrollTop();
+      var footHeight = $(".footer").innerHeight();
+      if (scrollHeight - scrollPosition <= footHeight) {
+        // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+        $(".to-top").css({
+          position: "absolute",
+          bottom: footHeight + 20,
+        });
+      } else {
+        $(".to-top").css({
+          position: "fixed",
+          bottom: "0",
+        });
+      }
+    });
   });
-
-
-  var footer = $('.footer').innerHeight(); // footerの高さを取得
-  window.onscroll = function () {
-    var point = window.pageYOffset; // 現在のスクロール地点
-    var docHeight = $(document).height(); // ドキュメントの高さ
-    var dispHeight = $(window).height(); // 表示領域の高さ
-
-    if(point > docHeight-dispHeight-footer){ // スクロール地点>ドキュメントの高さ-表示領域-footerの高さ
-      $('.to-top').addClass('is-hidden'); //footerより下にスクロールしたらis-hiddenを追加
-    }else{
-        $('.to-top').removeClass('is-hidden'); //footerより上にスクロールしたらis-hiddenを削除
-    }
-  };
-
 
   // ドロワーメニュー
   $(".js-hamburger").click(function () {
@@ -82,6 +94,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     //   el: ".js-works-paginations",
     // },
     loop: true,
+    loopedSlides: 8,
     clickable: true,
     autoplay: {
       delay: 3000,
@@ -91,12 +104,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    slidesPerView: 1.25,
-    spaceBetween: 24,
 
+    width: 280,
     breakpoints: {
       768: {
-        slidesPerView: 3.5,
+        width: 333,
+      },
+    },
+
+    spaceBetween: 24,
+    breakpoints: {
+      768: {
         spaceBetween: 40,
       },
     },

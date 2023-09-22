@@ -1,12 +1,17 @@
 @use "global" as *;
 
 
+body {
+  position: relative;
+}
+
 .to-top {
   position: fixed;
   right: rem(15);
   bottom: rem(16);
   overflow: hidden;
   border-radius: 50%;
+  z-index: 100;
   @include mq('md') {
     right: rem(20);
   }

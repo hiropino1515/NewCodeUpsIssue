@@ -21,10 +21,6 @@
   }
 }
 
-.card__wrapper {
-
-}
-
 .card__image {
   position: relative;
   width: 100%;
@@ -105,6 +101,8 @@
 
 .card__body {
   margin-top: rem(20);
+  height: rem(120);
+  overflow: scroll;
 }
 
 .card__text {

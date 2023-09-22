@@ -3,6 +3,7 @@
 .swiper__container {
   position: relative;
   width: 100%;
+  max-width: 100vw;
   padding-right: 0;
   padding-left: $padding-sp;
   margin-left: auto;
@@ -12,45 +13,42 @@
   }
 }
 
+.swiper {
+  max-width: 100vw;
+  width: 100%;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   display: none;
-  position: absolute;
-  width: 5.5%;
-  height: 9.8%;
-  top: rem(-80);
-  left: auto;
   @include mq('md') {
+    // left: revert;
+    // right: revert;
+    width: rem(80);
+    height: rem(80);
     display: block;
   }
 }
 
-.swiper-button-prev {
-  right: rem(340);
-}
-
-.swiper-button-next {
-  right: rem(180);
-}
-
 .swiper-button-prev::after,
 .swiper-button-next::after {
+  content: "";
+  position: absolute;
+  top: rem(-320);
+  width: rem(80);
+  height: rem(80);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 5.5%;
-  height: 9.8%;
-  display: block;
 }
 
 .swiper-button-prev::after {
-  content: url("/assets/images/common/prev.png");
+  background-image: url("/assets/images/common/prev.png");
+  right: rem(180);
+  left: auto;
 }
 
 .swiper-button-next::after {
-  content: url("/assets/images/common/next.png");
-}
-
-.swiper-slide img {
-  object-fit: cover;
-  width: 100%;
+  background-image: url("/assets/images/common/next.png");
+  right: rem(180);
+  left: auto;
 }

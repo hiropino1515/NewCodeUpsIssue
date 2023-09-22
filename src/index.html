@@ -23,17 +23,19 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@700&family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
-  <link
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+ <!-- <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
->
+> -->
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <!-- JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="/assets/js/jquery.inview.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
   <script defer src="./assets/js/script.js"></script>
   <script defer src="/assets/js/gsap.js"></script>
 </head>
@@ -161,7 +163,7 @@
         </div>
         <div class="swiper mv__swiper js-mv-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide mv__swiper-slide js-mv-slide">
+            <div class="mv__swiper-slide swiper-slide  js-mv-slide">
               <picture>
                 <source srcset="/assets/images/common/mv-sp.jpg" media="(max-width: 767px)" >
                 <source srcset="/assets/images/common/main-view.jpg" media="(min-width: 768px)">
@@ -411,7 +413,7 @@
                           <div class="card__category">ライセンス講習</div>
                         </div>
                         <div class="card__heading">
-                          <h3 class="campaign-card__title">ライセンス取得</h3>
+                          <h3 class="campaign-card__title">ライセンス取得ライセンス取得ライセンス取得ライセンス取得ライセンス取得</h3>
                         </div>
                       </div>
                     </div>
@@ -500,8 +502,8 @@
           <p class="blog-header__entitle">Blog</p>
           <h2 class="blog-header__jatitle">ブログ</h2>
         </div>
-        <div class="blog__items">
-          <a href="#" class="card card__outer blog__item">
+        <div class="blog__items blog-card__list">
+          <a href="#" class="card card__outer blog__item blog-card__list-item">
             <div class="card__inner">
               <div class="card__wrapper">
                 <div class="card__image">
@@ -517,11 +519,11 @@
                 </div>
               </div>
               <div class="card__body">
-                <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+                <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
               </div>
             </div>
           </a>
-          <a href="#" class="card card__outer blog__item">
+          <a href="#" class="card card__outer blog__item blog-card__list-item">
             <div class="card__inner">
               <div class="card__wrapper">
                 <div class="card__image">
@@ -541,7 +543,7 @@
               </div>
             </div>
           </a>
-          <a href="#" class="card card__outer blog__item">
+          <a href="#" class="card card__outer blog__item blog-card__list-item">
             <div class="card__inner">
               <div class="card__wrapper">
                 <div class="card__image">
@@ -557,7 +559,7 @@
                 </div>
               </div>
               <div class="card__body">
-                <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+                <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
               </div>
             </div>
           </a>
@@ -574,8 +576,8 @@
           <p class="section-header__entitle">Voice</p>
           <h2 class="section-header__jatitle">お客様の声</h2>
         </div>
-        <div class="voice__items">
-          <div class="card card__outer voice__item">
+        <div class="voice__items voice-card__list">
+          <div class="card card__outer voice__item voice-card__list-item">
             <div class="voice__item-inner">
               <div class="voice__wrapper">
                 <div class="voice__image js-colorbox">
@@ -601,30 +603,7 @@
               </div>
             </div>
           </div>
-          <div class="card card__outer voice__item">
-            <div class="voice__item-inner">
-              <div class="voice__wrapper">
-                <div class="voice__image js-colorbox">
-                  <img src="../assets/images/common/voice2.jpg" alt="男性の画像">
-                </div>
-                <div class="voice-card__head">
-                  <div class="voice__meta">
-                    <div class="card__tag">20代(男性)</div>
-                    <div class="card__category">ファンダイビング</div>
-                  </div>
-                  <div class="voice__heading">
-                    <h3 class="voice__title">ここにタイトルが入ります。ここにタイトル</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="voice__body">
-                <p class="voice__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。</p>
-              </div>
-            </div>
-          </div>
-          <div class="card card__outer voice__item">
+          <div class="card card__outer voice__item voice-card__list-item">
             <div class="voice__item-inner">
               <div class="voice__wrapper">
                 <div class="voice__image js-colorbox">
@@ -788,8 +767,8 @@
       </div>
     </section>
 
-    <div class="to-top">
-      <a href="#top"><span></span></a>
+    <div id="to-top" class="to-top">
+      <a href="#"><span></span></a>
     </div>
 
   </main>
@@ -857,6 +836,7 @@
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>
