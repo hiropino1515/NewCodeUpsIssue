@@ -18,10 +18,10 @@
     content: "";
     display: block;
     position: absolute;
-    right: rem(83);
+    right: calc(50% - min(50vw, 40rem));
     bottom: rem(50);
-    width: 13.472%;
-    height: 17.287%;
+    width: rem(194);
+    height: rem(181);
     background-image: url(/assets/images/common/about-us-isoginchaku.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@
     margin-top: 0;
     display: flex;
     align-items: center;
-    gap: rem(16);
+    gap: rem(32);
     position: absolute;
     top: rem(-28);
     right: 0;
@@ -97,12 +97,13 @@
     font-size: rem(80);
     line-height: 1.25;
     color: $base;
+    min-width: rem(400);
     width: 100%;
   }
 }
 
 .about__content {
-  width: 100%;
+  max-width: 100%;
   margin-top: rem(16);
   @include mq('md') {
     margin-top: rem(32);

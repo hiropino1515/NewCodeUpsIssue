@@ -23,9 +23,9 @@
     display: block;
     position: absolute;
     bottom: rem(60);
-    left: rem(100);
-    width: 30.347%;
-    height: 16.9%;
+    left: calc(50% - min(50vw, 40rem));
+    width: rem(437);
+    height: rem(201);
     background-image: url(/assets/images/common/price-tai.png);
     background-size: contain;
     background-repeat: no-repeat;

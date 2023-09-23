@@ -9,18 +9,18 @@
   display: block;
   position: absolute;
   top: rem(54);
-  right: rem(15);
-  width: 29.1%;
-  height: 6.2%;
+  right: calc(50% - min(50vw, 18rem));
+  width: rem(109);
+  height: rem(50);
   background-image: url(/assets/images/common/contact-fish.png);
   background-size: contain;
   background-repeat: no-repeat;
   @include mq('md') {
     background-image: url(/assets/images/common/contact-fish_pc.png);
     top: rem(100);
-    right: rem(50);
-    width: 20.9%;
-    height: 19.3%;
+    right: calc(50% - min(50vw, 40rem));
+    width: rem(301);
+    height: rem(138);
   }
 }
 

@@ -30,11 +30,21 @@
   object-fit: cover;
 }
 
-
 .campaign-card__inner {
   padding: rem(16) rem(16) rem(24);
+  max-height: rem(178);
+  height: 100%;
   @include mq('md') {
     padding: rem(26) rem(16) rem(40);
+    max-height: rem(222);
+    height: 100%;
+  }
+}
+
+.campaign-card__body {
+  margin-top: rem(8);
+  @include mq('md') {
+    margin-top: rem(16);
   }
 }
 
@@ -43,6 +53,8 @@
   font-weight: 500;
   font-family: $base-font-family;
   line-height: 1.333;
+  max-height: rem(50);
+  height: 100%;
   position: relative;
 }
 

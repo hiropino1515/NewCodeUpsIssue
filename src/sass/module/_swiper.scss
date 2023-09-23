@@ -2,8 +2,8 @@
 
 .swiper__container {
   position: relative;
-  width: 100%;
   max-width: 100vw;
+  width: 100%;
   padding-right: 0;
   padding-left: $padding-sp;
   margin-left: auto;
@@ -22,33 +22,36 @@
 .swiper-button-next {
   display: none;
   @include mq('md') {
-    // left: revert;
-    // right: revert;
+    display: block;
+    position: absolute;
+    top: rem(-80);
     width: rem(80);
     height: rem(80);
-    display: block;
   }
+}
+
+.swiper-button-prev {
+  left: 70.8%;
+}
+
+.swiper-button-next {
+  right: 12.5%;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
+  display: block;
   content: "";
-  position: absolute;
-  top: rem(-320);
-  width: rem(80);
-  height: rem(80);
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .swiper-button-prev::after {
   background-image: url("/assets/images/common/prev.png");
-  right: rem(180);
-  left: auto;
 }
 
 .swiper-button-next::after {
   background-image: url("/assets/images/common/next.png");
-  right: rem(180);
-  left: auto;
 }
