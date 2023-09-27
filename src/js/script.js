@@ -46,10 +46,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass("is-active")) {
       $(".js-hamburger").removeClass('is-active');
-
+      $("body").removeClass('is-active');
       $(".js-sp-nav").fadeOut(300);
     } else {
       $(".js-hamburger").addClass('is-active');
+      $("body").addClass('is-active');
       $(".js-sp-nav").fadeIn(300);
     }
   });
@@ -85,10 +86,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     loop: true,
     loopedSlides: 4,
     clickable: true,
+    effect: 'fade', // フェードのエフェクト
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
     },
+    speed: 2000, // ２秒かけながら次の画像へ移動
   });
 
   var swiper = new Swiper(".js-campaign-swiper", {

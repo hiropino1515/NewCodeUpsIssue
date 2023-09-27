@@ -103,53 +103,55 @@
         </ul>
       </nav>
       <nav class="header__sp-nav sp-nav js-sp-nav">
-        <ul class="sp-nav__items">
-          <li class="sp-nav__item">
-            <a href="#campaign">キャンペーン</a>
-            <ul>
-              <li><a href="#">ライセンス取得</a></li>
-              <li><a href="#">貸切体験ダイビング</a></li>
-              <li><a href="#">ナイトダイビング</a></li>
-            </ul>
-          </li>
-          <li class="sp-nav__item">
-            <a href="#about-us">私たちについて</a>
-          </li>
-          <li class="sp-nav__item">
-            <a href="#information">ダイビング情報</a>
-            <ul>
-              <li><a href="#">ライセンス講習</a></li>
-              <li><a href="#">体験ダイビング</a></li>
-              <li><a href="#">ファンダイビング</a></li>
-            </ul>
-          </li>
-          <li class="sp-nav__item">
-            <a href="#blog">ブログ</a>
-          </li>
-          <li class="sp-nav__item">
-            <a href="#voice">お客様の声</a>
-          </li>
-          <li class="sp-nav__item">
-            <a href="#price">料金一覧</a>
-            <ul>
-              <li><a href="#">ライセンス講習</a></li>
-              <li><a href="#">体験ダイビング</a></li>
-              <li><a href="#">ファンダイビング</a></li>
-            </ul>
-          </li>
-          <li class="sp-nav__item">
-            <a href="#faq">よくある質問</a>
-          </li>
-          <li class="sp-nav__item">
-            <a href="#">プライバシー <br>ポリシー</a>
-          </li>
-          <li class="sp-nav__item">
-            <a href="#">利用規約</a>
-          </li>
-          <li class="sp-nav__item">
-            <a href="#contact">おい問わ合せ</a>
-          </li>
-        </ul>
+        <div class="sp-nav__inner">
+          <ul class="sp-nav__items">
+            <li class="sp-nav__item">
+              <a href="#campaign">キャンペーン</a>
+              <ul>
+                <li><a href="#">ライセンス取得</a></li>
+                <li><a href="#">貸切体験ダイビング</a></li>
+                <li><a href="#">ナイトダイビング</a></li>
+              </ul>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#about-us">私たちについて</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#information">ダイビング情報</a>
+              <ul>
+                <li><a href="#">ライセンス講習</a></li>
+                <li><a href="#">体験ダイビング</a></li>
+                <li><a href="#">ファンダイビング</a></li>
+              </ul>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#blog">ブログ</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#voice">お客様の声</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#price">料金一覧</a>
+              <ul>
+                <li><a href="#">ライセンス講習</a></li>
+                <li><a href="#">体験ダイビング</a></li>
+                <li><a href="#">ファンダイビング</a></li>
+              </ul>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#faq">よくある質問</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#">プライバシー <br>ポリシー</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#">利用規約</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#contact">おい問わ合せ</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -444,13 +446,14 @@
         </div>
         <div class="about__wrapper">
           <div class="about__images">
-            <div class="about__image">
+            <div class="about__image-left">
+              <img src="/assets/images/common/ocean1.jpg" alt="シーサーの画像">
+            </div>
+            <div class="about__image-right">
               <picture>
                 <source srcset="/assets/images/common/ocean2-sp.jpg" media="(max-width: 767px)" >
-                <source srcset="/assets/images/common/ocean2.jpg" media="(min-width: 768px)">
-                <img src="/assets/images/common/ocean2.jpg" class="about__image--right" alt="海中の画像">
+                <img src="/assets/images/common/ocean2.jpg" alt="海中の画像">
               </picture>
-              <img src="/assets/images/common/ocean1.jpg" class="about__image--left" alt="シーサーの画像">
             </div>
           </div>
           <div class="about__body">
@@ -555,7 +558,7 @@
                 </div>
               </div>
               <div class="card__body">
-                <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+                <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。</p>
               </div>
             </div>
           </a>
@@ -746,7 +749,9 @@
                 <p class="contact__meta-text">営業時間:8:30-19:00</p>
                 <p class="contact__meta-text">定休日:毎週火曜日</p>
               </div>
-              <div class="contact__map"><span></span></div>
+              <div class="contact__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.997146371967!2d141.3509021105377!3d43.06252757101588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b297627507247%3A0x1b9ba84a4b04cdeb!2z5pyt5bmM5biC5pmC6KiI5Y-w!5e0!3m2!1sja!2sjp!4v1695843524992!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
             </div>
           </div>
           <div class="contact__content--right">

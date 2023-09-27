@@ -8,8 +8,8 @@
   content: "";
   display: block;
   position: absolute;
-  top: rem(54);
-  right: calc(50% - min(50vw, 18rem));
+  top: rem(-28);
+  right: calc(50% - min(48vw, 18rem));
   width: rem(109);
   height: rem(50);
   background-image: url(/assets/images/common/contact-fish.png);
@@ -17,19 +17,19 @@
   background-repeat: no-repeat;
   @include mq('md') {
     background-image: url(/assets/images/common/contact-fish_pc.png);
-    top: rem(100);
-    right: calc(50% - min(50vw, 40rem));
+    top: rem(-36);
+    right: calc(50% - min(50vw, 42rem));
     width: rem(301);
     height: rem(138);
   }
 }
 
 .contact__outer {
-  padding-top: rem(80);
-  padding-bottom: rem(104);
+  margin-top: rem(80);
+  margin-bottom: rem(104);
   @include mq('md') {
-    padding-top: rem(140);
-    padding-bottom: rem(160);
+    margin-top: rem(140);
+    margin-bottom: rem(160);
   }
 }
 .contact__inner {
@@ -146,7 +146,7 @@
   padding-top: 54.237%;
 }
 
-.contact__map span {
+.contact__map iframe {
   position: absolute;
   top: 50%;
   left: 50%;

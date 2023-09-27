@@ -4,9 +4,9 @@
 }
 
 .campaign__outer {
-  padding-top: rem(40);
+  margin-top: rem(40);
   @include mq('md') {
-    padding-top: rem(120);
+    margin-top: rem(120);
   }
 }
 
@@ -26,18 +26,13 @@
 
 .campaign__swiper-slide {
   width: 100%;
-  height: auto;
   object-fit: cover;
 }
 
 .campaign-card__inner {
   padding: rem(16) rem(16) rem(24);
-  max-height: rem(178);
-  height: 100%;
   @include mq('md') {
     padding: rem(26) rem(16) rem(40);
-    max-height: rem(222);
-    height: 100%;
   }
 }
 
@@ -53,8 +48,6 @@
   font-weight: 500;
   font-family: $base-font-family;
   line-height: 1.333;
-  max-height: rem(50);
-  height: 100%;
   position: relative;
 }
 

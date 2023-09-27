@@ -15,6 +15,11 @@
   display: block;
 }
 
+.sp-nav__inner {
+  height: inherit;
+  overflow: scroll;
+}
+
 .sp-nav__items {
   column-count: 2;
   column-gap: 0;

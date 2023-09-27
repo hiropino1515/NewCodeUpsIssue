@@ -42,3 +42,8 @@ opacity: 0;
 top: 50%;
 transform: rotate(-36.87deg);
 }
+
+body.is-active {
+  height: 100vh;
+  overflow: hidden;
+}

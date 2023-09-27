@@ -5,11 +5,11 @@
 }
 
 .voice__outer {
-  padding-top: rem(80);
-  padding-bottom: rem(80);
+  margin-top: rem(80);
+  margin-bottom: rem(80);
   @include mq('md') {
-    padding-top: rem(136);
-    padding-bottom: rem(142);
+    margin-top: rem(136);
+    margin-bottom: rem(142);
   }
 }
 
@@ -22,8 +22,8 @@
     content: "";
     display: block;
     position: absolute;
-    top: rem(20);
-    left: calc(50% - min(50vw, 40rem));
+    top: rem(-120);
+    left: calc(50% - min(48vw, 40rem));
     width: rem(301);
     height: rem(138);
     background-image: url(/assets/images/common/voice-tai.png);
@@ -37,8 +37,8 @@
     content: "";
     display: block;
     position: absolute;
-    bottom: rem(73);
-    right: calc(50% - min(50vw, 34rem));
+    bottom: rem(-70);
+    right: calc(50% - min(48vw, 34rem));
     width: rem(71);
     height: rem(161);
     background-image: url(/assets/images/common/voice-tatu.png);
@@ -176,11 +176,8 @@
 
 .voice__body {
   margin-top: rem(16);
-  height: rem(240);
-  overflow: hidden;
   @include mq('md') {
     margin-top: rem(40);
-    height: rem(168);
   }
 }
 
