@@ -5,15 +5,6 @@
   position: relative;
 }
 
-.price__outer {
-  padding-top: rem(80);
-  padding-bottom: rem(84);
-  @include mq('md') {
-    padding-top: rem(95);
-    padding-bottom: rem(105);
-  }
-}
-
 .price__inner {
   max-width: rem(600);
 }
@@ -23,7 +14,7 @@
     display: block;
     position: absolute;
     bottom: rem(60);
-    left: calc(50% - min(50vw, 40rem));
+    left: calc(50% - min(48vw, 40rem));
     width: rem(437);
     height: rem(201);
     background-image: url(/assets/images/common/price-tai.png);
@@ -43,25 +34,15 @@
 }
 
 .price__image {
-  position: relative;
-}
-
-.price__image::before {
-  content: "";
-  display: block;
-  padding-top: 65.8%;
-  @include mq('md') {
-    padding-top: 152%;
-  }
+  width: 100%;
 }
 
 .price__image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 345 / 227;
+  object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 492 / 746;
+  }
 }
 
 .price__items {

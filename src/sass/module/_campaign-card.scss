@@ -1,0 +1,50 @@
+@use 'global' as *;
+
+.campaign-card {
+
+}
+
+.campaign-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.campaign-card__inner {
+  padding: rem(16) rem(16) rem(24);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  @include mq('md') {
+    padding: rem(26) rem(16) rem(40);
+  }
+}
+
+.campaign-card__head {
+  flex-grow: 1;
+}
+
+.campaign-card__body {
+  margin-top: rem(8);
+  text-align: center;
+  @include mq('md') {
+    margin-top: rem(16);
+  }
+}
+
+.campaign-card__menu-title {
+  font-size: rem(14);
+  font-weight: $normal;
+  font-family: $base-font-family;
+  line-height: 1.5;
+}
+
+.campaign-card__title {
+  margin-top: rem(4);
+  font-size: rem(18);
+  font-weight: 500;
+  font-family: $base-font-family;
+  line-height: 1.333;
+  border-bottom: 1px solid $main;
+  padding-bottom: rem(8);
+}

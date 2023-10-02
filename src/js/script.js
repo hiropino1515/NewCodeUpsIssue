@@ -68,7 +68,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     let header = $(".header").innerHeight();
     let speed = 300;
     let id = $(this).attr("href");
-    let target = $('#' == id ? "html" : id);
+    let target = id === "#" ? "html" : $(id);
     let position = $(target).offset().top - header;
     $("html, body").animate(
       {
@@ -100,7 +100,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     // },
     loop: true,
     loopedSlides: 8,
-    clickable: true,
     width: 280,
     spaceBetween: 24,
     autoplay: {
@@ -147,68 +146,41 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
   });
+  // // ローディング画面
+  // let webStorage = function () {
+  //   if (sessionStorage.getItem("access")) {
+  //     // ローディング非表示;
+  //     $(".js-loader").hide();
+  //   } else {
+  //     // 初回アクセス時の処理;
+  //     sessionStorage.setItem("access", 0);
+
+  //     $(window).on("load", function () {
+  //       $("body").addClass("is-fixed");
+  //       setTimeout(function () {
+  //         $(".loader__title--green").addClass("is-active");
+  //       }, 0);
+  //       setTimeout(function () {
+  //         $(".loader__left").addClass("is-active");
+  //       }, 500);
+  //       setTimeout(function () {
+  //         $(".loader__right").addClass("is-active");
+  //       }, 580);
+  //       setTimeout(function () {
+  //         $(".loader__title").addClass("is-active");
+  //       }, 1200);
+  //     });
+
+  //     $(".loader__title").on("animationend", function () {
+  //       setTimeout(function () {
+  //         $(".js-loader").animate({ opacity: 0 }, 300, function () {
+  //           $("body").removeClass("is-fixed");
+  //           $(this).remove();
+  //         });
+  //       }, 300);
+  //     });
+  //   }
+  // };
+  // webStorage();
+
 });
-  // ローディングアニメーション
-  // クッキー登録
-//   function setCookie(name, value, days) {
-//     const date = new Date();
-//     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-//     const expires = "expires=" + date.toUTCString();
-//     document.cookie = name + "=" + value + ";" + expires + ";path=/";
-//   }
-//   // クッキーを取得
-//   function getCookie(name) {
-//     const value = "; " + document.cookie;
-//     const parts = value.split("; " + name + "=");
-//     if (parts.length === 2){
-//         return parts.pop().split(";").shift();
-//     }else{
-//         return "";
-//     }
-//   }
-//   // アニメーション再生
-//   const loadingAnime = document.querySelector('.js-loading');
-//   const body = document.body;
-//   const scrollPosition = window.scrollY;
-//   function playAnimation() {
-//     if (loadingAnime) {
-//       body.style.overflow = 'hidden'; // スクロールを禁止
-//       const openingTL = gsap.timeline();
-//       openingTL
-//       .fromTo('.js-loading-title',
-//         {clipPath:'inset(100% 0 0 0)',scale:1.1,autoAlpha:0},
-//         {clipPath:'inset(0% 0 0 0)',scale:1,autoAlpha:1,duration:2,ease:'power4.out',delay:1})
-//       .fromTo('.js-loading-img',
-//         {y:'100%'},
-//         {y:'0%',duration:2,ease:'power4.out',stagger:.1},'-=0.5')
-//       .to('.js-loading-title',{autoAlpha:0,duration:.8},'<')
-//       .fromTo('.js-loading-title',
-//         {autoAlpha:0,scale:0.9},
-//         {autoAlpha:1,scale:1,duration:1,ease:'power4.in',color:'#fff'},'-=.5')
-//       .fromTo('.js-loading',{autoAlpha:1},{autoAlpha:0,duration:1,ease:'power4.in'},'+=2')
-//       .call(enableScroll); // アニメーション終了時にスクロールを有効にする
-//     }
-//   }
-//   function enableScroll() {
-//     // スクロールを有効にする
-//     body.style.overflow = 'auto';
-//     // スクロール位置を元に戻す（任意の位置にスクロールさせない場合はこの行を削除できます）
-//     window.scrollTo(0, scrollPosition);
-//   }
-//   // オープニングアニメーションに関わる要素を非表示
-//   function hideAnimation() {
-//     if (loadingAnime) {
-//       gsap.set('.js-loading',{autoAlpha:0})
-//     }
-//   }
-//   // まず最初に読み込まれる所
-//   document.addEventListener("DOMContentLoaded", function() {
-//   const animationPlayed = getCookie("animationPlayed");
-//     if (animationPlayed) {
-//       hideAnimation();
-//     } else {
-//       playAnimation();
-//       setCookie("animationPlayed", "true", 1);
-//     }
-//   });
-// });

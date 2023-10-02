@@ -4,15 +4,6 @@
   background-color: $main;
 }
 
-.footer__outer {
-  padding-top: rem(48);
-  padding-bottom: rem(56);
-  @include mq('md') {
-    padding-top: rem(80);
-    padding-bottom: rem(80);
-  }
-}
-
 .footer__inner {
   max-width: rem(600);
 }

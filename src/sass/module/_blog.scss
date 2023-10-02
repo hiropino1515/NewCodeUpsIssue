@@ -6,15 +6,6 @@
   }
 }
 
-.blog__outer {
-  padding-top: rem(80);
-  padding-bottom: 0;
-  @include mq('md') {
-    padding-top: rem(96);
-    padding-bottom: 0;
-  }
-}
-
 .blog::before {
   @include mq('md') {
     content: "";
@@ -37,7 +28,7 @@
     display: block;
     position: absolute;
     top: rem(24);
-    left: calc(50% - min(50vw, 40rem));
+    left: calc(50% - min(48vw, 40rem));
     width: rem(437);
     height: rem(201);
     background-image: url(/assets/images/common/blog-tai.png);
@@ -86,40 +77,6 @@
   margin-top: rem(30);
   @include mq('md') {
     margin-top: rem(78);
-  }
-}
-
-.blog-card__list {
-  @include mq('md') {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.blog-card__list-item {
-  @include mq('md') {
-    max-width: calc(33.3333% - 2.5rem * 2 / 3);
-    width: 100%;
-  }
-}
-
-.blog__item:not(:first-child) {
-  margin-top: rem(40);
-  @include mq('md') {
-    margin-top: 0;
-    margin-left: rem(40);
-  }
-}
-
-.blog__item:nth-child(3n + 1) {
-  @include mq('md') {
-    margin-left: 0;
-  }
-}
-
-.blog__item:nth-child(n + 4) {
-  @include mq('md') {
-    margin-top: rem(40);
   }
 }
 

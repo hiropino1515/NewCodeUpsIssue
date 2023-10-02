@@ -4,15 +4,6 @@
   background-color: #DDF0F1;
 }
 
-.information__outer {
-  padding-top: rem(80);
-  padding-bottom: rem(82);
-  @include mq('md') {
-    padding-top: rem(95);
-    padding-bottom: rem(98);
-  }
-}
-
 .information__inner {
   max-width: rem(600);
 }
@@ -34,25 +25,15 @@
 }
 
 .information__image {
-  position: relative;
-  @include mq('md') {
   width: 100%;
-  }
-}
-
-.information__image::before {
-  content: "";
-  display: block;
-  padding-top: 66%;
 }
 
 .information__image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 345 / 227;
+  object-fit: cover;
+  @include mq('md') {
+    aspect-ratio: 540 / 356;
+  }
 }
 
 .information__content {
