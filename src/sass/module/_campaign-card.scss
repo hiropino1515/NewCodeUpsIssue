@@ -1,7 +1,8 @@
 @use 'global' as *;
 
 .campaign-card {
-
+  padding-bottom: rem(10);
+  padding-left: rem(10);
 }
 
 .campaign-card__link {

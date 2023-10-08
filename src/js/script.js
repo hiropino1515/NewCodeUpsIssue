@@ -146,41 +146,4 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
   });
-  // // ローディング画面
-  // let webStorage = function () {
-  //   if (sessionStorage.getItem("access")) {
-  //     // ローディング非表示;
-  //     $(".js-loader").hide();
-  //   } else {
-  //     // 初回アクセス時の処理;
-  //     sessionStorage.setItem("access", 0);
-
-  //     $(window).on("load", function () {
-  //       $("body").addClass("is-fixed");
-  //       setTimeout(function () {
-  //         $(".loader__title--green").addClass("is-active");
-  //       }, 0);
-  //       setTimeout(function () {
-  //         $(".loader__left").addClass("is-active");
-  //       }, 500);
-  //       setTimeout(function () {
-  //         $(".loader__right").addClass("is-active");
-  //       }, 580);
-  //       setTimeout(function () {
-  //         $(".loader__title").addClass("is-active");
-  //       }, 1200);
-  //     });
-
-  //     $(".loader__title").on("animationend", function () {
-  //       setTimeout(function () {
-  //         $(".js-loader").animate({ opacity: 0 }, 300, function () {
-  //           $("body").removeClass("is-fixed");
-  //           $(this).remove();
-  //         });
-  //       }, 300);
-  //     });
-  //   }
-  // };
-  // webStorage();
-
-});
+})

@@ -9,7 +9,6 @@
   <title>CodeUps</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <meta name=”robots” content=”noindex”>
   <!-- ogp -->
   <meta property="og:title" content="">
   <meta property="og:type" content="">
@@ -24,10 +23,6 @@
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@700&family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
- <!-- <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-> -->
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <!-- JavaScript -->
@@ -35,7 +30,6 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="/assets/js/jquery.inview.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
   <script defer src="./assets/js/script.js"></script>
   <script defer src="/assets/js/gsap.js"></script>
 </head>
@@ -45,11 +39,13 @@
       <h1 class="header__logo">
         <a href="#"><img src="../assets/images/common/CodeUps.png" alt="CodeUpsのロゴ画像"></a>
       </h1>
+
       <div class="header__drawer hamburger js-hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
+
       <nav class="header__pc-nav pc-nav">
         <ul class="pc-nav__items">
           <li class="pc-nav__item">
@@ -102,6 +98,7 @@
           </li>
         </ul>
       </nav>
+
       <nav class="header__sp-nav sp-nav js-sp-nav">
         <div class="sp-nav__inner">
           <ul class="sp-nav__items">
@@ -153,30 +150,16 @@
           </ul>
         </div>
       </nav>
+
     </div>
   </header>
 
   <main>
-    <section class="mv js-mv">
-
-      <!-- <div class="mv__loader loader js-loader">
-        <div class="loader__title">
-          <h2 class="loader__main">Diving</h2>
-          <p class="loader__sub">into the ocean</p>
-        </div>
-
-        <div class="loader__left"></div>
-        <div class="loader__right"></div>
-        <div class="loader__title--green">
-          <h2 class="loader__main">Diving</h2>
-          <p class="loader__sub">into the ocean</p>
-        </div>
-      </div> -->
-
+    <div class="mv js-mv">
       <div class="mv__inner">
         <div class="mv__header js-mv-header">
-          <div class="mv__title">diving</div>
-          <div class="mv__subtitle">into the ocean</div>
+          <h2 class="mv__title">diving</h2>
+          <p class="mv__subtitle">into the ocean</p>
         </div>
         <div class="swiper mv__swiper js-mv-swiper">
           <div class="swiper-wrapper">
@@ -207,7 +190,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <section id="campaign" class="campaign layout-campaign">
       <div class="campaign__inner">
@@ -217,8 +200,8 @@
         </div>
         <div class="swiper__container">
           <div class="swiper campaign__swiper js-campaign-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide campaign-card">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide campaign-card">
                 <a href="#" class="card card__outer campaign-card__link">
                   <div class="card__image">
                     <img src="../assets/images/common/campaign1.jpg" alt="熱帯魚の画像">
@@ -237,8 +220,8 @@
                     </div>
                   </div>
                 </a>
-              </div>
-              <div class="swiper-slide campaign-card">
+              </li>
+              <li class="swiper-slide campaign-card">
                 <a href="#" class="card card__outer campaign-card__link">
                   <div class="card__image">
                     <img src="../assets/images/common/campaign2.jpg" alt="ボートの画像">
@@ -257,8 +240,8 @@
                     </div>
                   </div>
                 </a>
-              </div>
-              <div class="swiper-slide campaign-card">
+              </li>
+              <li class="swiper-slide campaign-card">
                 <a href="#" class="card card__outer campaign-card__link">
                   <div class="card__image">
                     <img src="../assets/images/common/campaign3.jpg" alt="クラゲの画像">
@@ -277,8 +260,8 @@
                     </div>
                   </div>
                 </a>
-              </div>
-              <div class="swiper-slide campaign-card">
+              </li>
+              <li class="swiper-slide campaign-card">
                 <a href="#" class="card card__outer campaign-card__link">
                   <div class="card__image">
                     <img src="../assets/images/common/campaign4.jpg" alt="ダイビングの画像">
@@ -297,8 +280,8 @@
                     </div>
                   </div>
                 </a>
-              </div>
-              <div class="swiper-slide campaign-card">
+              </li>
+              <li class="swiper-slide campaign-card">
                 <a href="#" class="card card__outer campaign-card__link">
                   <div class="card__image">
                     <img src="../assets/images/common/campaign1.jpg" alt="熱帯魚の画像">
@@ -317,8 +300,8 @@
                     </div>
                   </div>
                 </a>
-              </div>
-              <div class="swiper-slide campaign-card">
+              </li>
+              <li class="swiper-slide campaign-card">
                 <a href="#" class="card card__outer campaign-card__link">
                   <div class="card__image">
                     <img src="../assets/images/common/campaign2.jpg" alt="ボートの画像">
@@ -337,8 +320,8 @@
                     </div>
                   </div>
                 </a>
-              </div>
-              <div class="swiper-slide campaign-card">
+              </li>
+              <li class="swiper-slide campaign-card">
                 <a href="#" class="card card__outer campaign-card__link">
                   <div class="card__image">
                     <img src="../assets/images/common/campaign3.jpg" alt="クラゲの画像">
@@ -357,8 +340,8 @@
                     </div>
                   </div>
                 </a>
-              </div>
-              <div class="swiper-slide campaign-card">
+              </li>
+              <li class="swiper-slide campaign-card">
                 <a href="#" class="card card__outer campaign-card__link">
                   <div class="card__image">
                     <img src="../assets/images/common/campaign4.jpg" alt="ダイビングの画像">
@@ -377,8 +360,8 @@
                     </div>
                   </div>
                 </a>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
@@ -408,8 +391,8 @@
             </div>
           </div>
           <div class="about__body">
-            <div class="about__title">Dive into
-              <br>the Ocean</div>
+            <h3 class="about__title">Dive into
+              <br>the Ocean</h3>
             <div class="about__content">
               <p class="about__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
@@ -452,68 +435,74 @@
           <p class="blog-header__entitle">Blog</p>
           <h2 class="blog-header__jatitle">ブログ</h2>
         </div>
-        <div class="blog__items blog-card__list">
-          <a href="#" class="card card__outer blog__item blog-card__list-item">
-            <div class="card__inner">
-              <div class="card__wrapper">
-                <div class="card__image">
-                  <img src="../assets/images/common/blog1.jpg" alt="サンゴ礁の画像">
-                </div>
-                <div class="card__head">
-                  <div class="card__meta">
-                    <div class="card__date">2023.11/17</div>
+        <ul class="blog__items blog-card__list">
+          <li class="card blog__item blog-card__list-item">
+            <a href="#" class="card__outer">
+              <div class="card__inner">
+                <div class="card__wrapper">
+                  <div class="card__image">
+                    <img src="../assets/images/common/blog1.jpg" alt="サンゴ礁の画像">
                   </div>
-                  <div class="card__heading">
-                    <h3 class="card__title">ライセンス取得</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="card__body">
-                <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。
-              </div>
-            </div>
-          </a>
-          <a href="#" class="card card__outer blog__item blog-card__list-item">
-            <div class="card__inner">
-              <div class="card__wrapper">
-                <div class="card__image">
-                  <img src="../assets/images/common/blog2.jpg" alt="ウミガメが泳いでいる画像">
-                </div>
-                <div class="card__head">
-                  <div class="card__meta">
-                    <div class="card__date">2023.11/17</div>
-                  </div>
-                  <div class="card__heading">
-                    <h3 class="card__title">ウミガメと泳ぐ</h3>
+                  <div class="card__head">
+                    <div class="card__meta">
+                      <time class="card__date" datetime="2023-11-17">2023.11/17</time>
+                    </div>
+                    <div class="card__heading">
+                      <h3 class="card__title">ライセンス取得</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card__body">
-                <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="card card__outer blog__item blog-card__list-item">
-            <div class="card__inner">
-              <div class="card__wrapper">
-                <div class="card__image">
-                  <img src="../assets/images/common/blog3.jpg" alt="カクレクマノミの画像">
-                </div>
-                <div class="card__head">
-                  <div class="card__meta">
-                    <div class="card__date">2023.11/17</div>
-                  </div>
-                  <div class="card__heading">
-                    <h3 class="card__title">カクレクマノミ</h3>
-                  </div>
+                <div class="card__body">
+                  <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。</p>
                 </div>
               </div>
-              <div class="card__body">
-                <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。</p>
+            </a>
+          </li>
+          <li class="card blog__item blog-card_list-item">
+            <a href="#" class="card__outer">
+              <div class="card__inner">
+                <div class="card__wrapper">
+                  <div class="card__image">
+                    <img src="../assets/images/common/blog2.jpg" alt="ウミガメが泳いでいる画像">
+                  </div>
+                  <div class="card__head">
+                    <div class="card__meta">
+                      <time class="card__date" datetime="2023-11-17">2023.11/17</time>
+                    </div>
+                    <div class="card__heading">
+                      <h3 class="card__title">ウミガメと泳ぐ</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </li>
+          <li class="card blog__item blog-card__list-item">
+            <a href="#" class="card__outer blog__item blog-card__list-item">
+              <div class="card__inner">
+                <div class="card__wrapper">
+                  <div class="card__image">
+                    <img src="../assets/images/common/blog3.jpg" alt="カクレクマノミの画像">
+                  </div>
+                  <div class="card__head">
+                    <div class="card__meta">
+                      <time class="card__date" datetime="2023-11-17">2023.11/17</time>
+                    </div>
+                    <div class="card__heading">
+                      <h3 class="card__title">カクレクマノミ</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <p class="card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 <br>ここにテキストが入ります。ここにテキストが入ります。</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
         <div class="blog__button">
           <a href="#" class="button">View more<span></span></a>
         </div>
@@ -526,8 +515,8 @@
           <p class="section-header__entitle">Voice</p>
           <h2 class="section-header__jatitle">お客様の声</h2>
         </div>
-        <div class="voice__items voice-card__list">
-          <div class="card card__outer voice__item voice-card__list-item">
+        <ul class="voice__items voice-card__list">
+          <li class="card card__outer voice__item voice-card__list-item">
             <div class="voice__item-inner">
               <div class="voice__wrapper">
                 <div class="voice__image js-colorbox">
@@ -549,8 +538,8 @@
                 ここにテキストが入ります。ここにテキストが入ります。</p>
               </div>
             </div>
-          </div>
-          <div class="card card__outer voice__item voice-card__list-item">
+          </li>
+          <li class="card card__outer voice__item voice-card__list-item">
             <div class="voice__item-inner">
               <div class="voice__wrapper">
                 <div class="voice__image js-colorbox">
@@ -572,8 +561,8 @@
                 ここにテキストが入ります。ここにテキストが入ります。</p>
               </div>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
         <div class="voice__button">
           <a href="#" class="button">View more<span></span></a>
         </div>
@@ -594,88 +583,88 @@
               <img src="/assets/images/common/ocean3.jpg" alt="ウミガメの画像">
             </picture>
           </div>
-          <div class="price__items">
-            <div class="price__item">
+          <ul class="price__items">
+            <li class="price__item">
               <div class="price-card__heading">
                 <h3 id="price1" class="price-card__title">ライセンス講習</h3>
               </div>
               <div class="price__course">
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">オープンウォーターダイバーコース</div>
-                  <div class="price__course-charge">¥50,000</div>
+                  <dt class="price__course-name">オープンウォーターダイバーコース</dt>
+                  <dd class="price__course-charge">¥50,000</dd>
                 </div>
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">アドバンスドオープンウォーターコース</div>
-                  <div class="price__course-charge">¥60,000</div>
+                  <dt class="price__course-name">アドバンスドオープンウォーターコース</dt>
+                  <dd class="price__course-charge">¥60,000</dd>
                 </div>
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">レスキュー＋EFRコース</div>
-                  <div class="price__course-charge">¥70,000</div>
+                  <dt class="price__course-name">レスキュー＋EFRコース</dt>
+                  <dd class="price__course-charge">¥70,000</dd>
                 </div>
               </div>
-            </div>
-            <div class="price__item">
+            </li>
+            <li class="price__item">
               <div class="price-card__heading">
                 <h3 id="price2" class="price-card__title">体験ダイビング</h3>
               </div>
               <div class="price__course">
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">ビーチ体験ダイビング(半日)</div>
-                  <div class="price__course-charge">¥7,000</div>
+                  <dt class="price__course-name">ビーチ体験ダイビング(半日)</dt>
+                  <dd class="price__course-charge">¥7,000</dd>
                 </div>
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">ビーチ体験ダイビング(1日)</div>
-                  <div class="price__course-charge">¥14,000</div>
+                  <dt class="price__course-name">ビーチ体験ダイビング(1日)</dt>
+                  <dd class="price__course-charge">¥14,000</dd>
                 </div>
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">ボート体験ダイビング(半日)</div>
-                  <div class="price__course-charge">¥10,000</div>
+                  <dt class="price__course-name">ボート体験ダイビング(半日)</dt>
+                  <dd class="price__course-charge">¥10,000</dd>
                 </div>
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">ボート体験ダイビング(1日)</div>
-                  <div class="price__course-charge">¥18,000</div>
+                  <dt class="price__course-name">ボート体験ダイビング(1日)</dt>
+                  <dd class="price__course-charge">¥18,000</dd>
                 </div>
               </div>
-            </div>
-            <div class="price__item">
+            </li>
+            <li class="price__item">
               <div class="price-card__heading">
                 <h3 id="price3" class="price-card__title">ファンダイビング</h3>
               </div>
               <div class="price__course">
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">ビーチダイビング(2ダイブ)</div>
-                  <div class="price__course-charge">¥14,000</div>
+                  <dt class="price__course-name">ビーチダイビング(2ダイブ)</dt>
+                  <dd class="price__course-charge">¥14,000</dd>
                 </div>
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">ボートダイビング(2ダイブ)</div>
-                  <div class="price__course-charge">¥18,000</div>
+                  <dt class="price__course-name">ボートダイビング(2ダイブ)</dt>
+                  <dd class="price__course-charge">¥18,000</dd>
                 </div>
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">スペシャルダイビング(2ダイブ)</div>
-                  <div class="price__course-charge">¥24,000</div>
+                  <dt class="price__course-name">スペシャルダイビング(2ダイブ)</dt>
+                  <dd class="price__course-charge">¥24,000</dd>
                 </div>
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">ナイトダイビング(1ダイブ)</div>
-                  <div class="price__course-charge">¥10,000</div>
+                  <dt class="price__course-name">ナイトダイビング(1ダイブ)</dt>
+                  <dd class="price__course-charge">¥10,000</dd>
                 </div>
               </div>
-            </div>
-            <div class="price__item">
+            </li>
+            <li class="price__item">
               <div class="price-card__heading">
                 <h3 class="price-card__title">スペシャルダイビング</h3>
               </div>
               <div class="price__course">
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">貸切ダイビング(2ダイブ)</div>
-                  <div class="price__course-charge">¥24,000</div>
+                  <dt class="price__course-name">貸切ダイビング(2ダイブ)</dt>
+                  <dd class="price__course-charge">¥24,000</dd>
                 </div>
                 <div class="price__course-wrapper">
-                  <div class="price__course-name">1日ダイビング(3ダイブ)</div>
-                  <div class="price__course-charge">¥32,000</div>
+                  <dt class="price__course-name">1日ダイビング(3ダイブ)</dt>
+                  <dd class="price__course-charge">¥32,000</dd>
                 </div>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
         <div class="price__button">
           <a href="#" class="button">View more<span></span></a>
@@ -716,9 +705,9 @@
       </div>
     </section>
 
-    <div id="to-top" class="to-top">
+    <button id="to-top" class="to-top">
       <a href="#"><span></span></a>
-    </div>
+    </button>
 
   </main>
 
