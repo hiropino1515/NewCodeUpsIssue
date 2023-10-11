@@ -16,6 +16,7 @@
     background-image: url(/assets/images/common/about-us-isoginchaku.png);
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: 5;
   }
 }
 
@@ -37,7 +38,7 @@
 .about__image-left {
   position: relative;
   width: 37%;
-  z-index: -1;
+  z-index: 2;
 }
 
 .about__image-left img {
@@ -55,7 +56,7 @@
   margin-left: auto;
   margin-top: -48.5%;
   width: 81.5%;
-  z-index: -3;
+  z-index: 1;
 }
 
 .about__image-right img {
@@ -79,6 +80,7 @@
     display: flex;
     align-items: center;
     gap: rem(40);
+    z-index: 4;
   }
 }
 

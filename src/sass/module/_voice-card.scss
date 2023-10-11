@@ -1,0 +1,128 @@
+@use "global" as *;
+
+.voice-card {
+  background: $base;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  // display: block;
+  z-index: 1;
+}
+
+.voice-card:hover {
+  opacity: .7;
+}
+
+
+.voice-card__inner{
+  padding: rem(16) rem(16) rem(26);
+  @include mq('md') {
+    padding: rem(24);
+  }
+}
+
+.voice-card__image {
+  margin-top: rem(6);
+  @include mq('md') {
+    margin-top: 0;
+    width: rem(305);
+  }
+}
+
+.voice-card__image img {
+  aspect-ratio: 151 / 117;
+  object-fit: cover;
+  @include mq('md') {
+    aspect-ratio: 180 / 140;
+  }
+}
+
+.voice-card__wrapper {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+  gap: rem(13);
+  @include mq('md') {
+    gap: rem(16);
+  }
+}
+
+
+.voice-card__head {
+  width: 100%;
+  margin-top: rem(-4);
+  @include mq('md') {
+    margin-top: rem(16);
+  }
+}
+
+.voice-card__meta {
+  @include mq('md') {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.voice-card__tag {
+  display: block;
+  font-family: $base-font-family;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+.voice-card__category {
+  display: inline-block;
+  font-size: rem(12);
+  font-weight: normal;
+  font-family: $base-font-family;
+  color: $main;
+  line-height: 1.8333;
+  padding: rem(2) rem(12);
+  border: 1px solid $main;
+  @include mq('md') {
+    padding: rem(4) rem(16);
+  }
+}
+
+.voice-card__heading {
+  margin-top: rem(8);
+  @include mq('md') {
+    margin-top: rem(16);
+  }
+}
+
+.voice-card__title {
+  font-size: rem(16);
+  font-weight: 500;
+  font-family: $base-font-family;
+  line-height: 1.333;
+  position: relative;
+  @include mq('md') {
+    font-size: rem(24);
+  }
+}
+
+.voice-card__title::after {
+  content: "";
+  position: absolute;
+  bottom: rem(-4);
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: $main;
+}
+
+
+.voice-card__body {
+  margin-top: rem(16);
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+
+.voice-card__text {
+  font-size: rem(16);
+  font-weight: $normal;
+  font-family: $base-font-family;
+  line-height: 1.5;
+}

@@ -5,15 +5,11 @@
 }
 
 .campaign__inner {
-  margin-right: auto;
-  margin-left: auto;
+
 }
 
 .campaign__swiper {
-  margin-top: rem(28);
-  @include mq('md') {
-    margin-top: rem(34);
-  }
+
 }
 
 .campaign__swiper-slide {

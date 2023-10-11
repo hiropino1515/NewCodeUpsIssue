@@ -48,10 +48,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $(".js-hamburger").removeClass('is-active');
       $("body").removeClass('is-active');
       $(".js-sp-nav").fadeOut(300);
+      $(".header").css('background', 'rgba(13, 41, 54, 0.68)');
     } else {
       $(".js-hamburger").addClass('is-active');
       $("body").addClass('is-active');
       $(".js-sp-nav").fadeIn(300);
+      $(".header").css('background', '#408F95');
     }
   });
 
@@ -60,6 +62,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(".js-sp-nav ul li a").on("click", function () {
       $(".js-hamburger").removeClass('is-active');
       $(".js-sp-nav").fadeOut(300);
+      $(".header").css('background', 'rgba(13, 41, 54, 0.68)');
     });
   });
 

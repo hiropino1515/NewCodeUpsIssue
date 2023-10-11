@@ -9,19 +9,17 @@
 }
 
 .information__contents {
+  margin-top: rem(26);
   @include mq('md') {
     display: flex;
     align-items: center;
     gap: rem(40);
+    margin-top: rem(36);
   }
 }
 
 .information__wrapper {
-  margin-top: rem(26);
-  @include mq('md') {
-    margin-top: rem(36);
-    width: 100%;
-  }
+
 }
 
 .information__image {
@@ -39,7 +37,7 @@
 .information__content {
   margin-top: rem(24);
   @include mq('md') {
-    margin-top: rem(24);
+    margin-top: 0;
     padding-left: rem(8);
     width: 100%;
   }
