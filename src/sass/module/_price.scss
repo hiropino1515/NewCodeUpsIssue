@@ -62,11 +62,11 @@
   }
 }
 
-.price-card__heading {
+.price__item-header {
   margin-top: 0;
 }
 
-.price-card__title {
+.price__item-title {
   font-size: rem(16);
   font-weight: 700;
   font-family: $base-font-family;
@@ -74,7 +74,7 @@
   position: relative;
 }
 
-.price-card__title::after {
+.price__item-title::after {
   content: "";
   position: absolute;
   bottom: rem(-4);

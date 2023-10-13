@@ -43,7 +43,7 @@
   }
 }
 
-.information__title {
+.information__heading {
   font-size: rem(20);
   font-weight: $bold;
   font-family: $base-font-family;
@@ -54,7 +54,7 @@
   }
 }
 
-.information__title::after {
+.information__heading::after {
   content: "";
   position: absolute;
   bottom: rem(-8);

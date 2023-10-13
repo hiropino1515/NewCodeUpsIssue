@@ -7,13 +7,29 @@
 .campaign__inner {
 
 }
+.campaign__title {
+
+}
+
+.campaign__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(28);
+  margin-right: calc(50% - 50vw);
+  @include mq('md') {
+    margin-top: rem(34);
+  }
+}
 
 .campaign__swiper {
 
 }
 
-.campaign__swiper-slide {
-  width: 100%;
+.campaign__slide {
+  padding-bottom: rem(10);
+  padding-left: rem(10);
+  height: 100%;
 }
 
 .campaign__button {

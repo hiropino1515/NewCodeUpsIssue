@@ -41,38 +41,6 @@
   max-width: rem(600);
 }
 
-.blog-header__entitle {
-  font-size: rem(32);
-  font-weight: normal;
-  font-family: $second-font-family;
-  color: $font;
-  line-height: 1.25;
-  @include mq('md') {
-    font-size: rem(40);
-    color: $base;
-  }
-}
-
-.blog-header__entitle::first-letter {
-  color: $main;
-  @include mq('md') {
-    color: $base;
-  }
-}
-
-.blog-header__jatitle {
-  margin-top: rem(4);
-  font-size: rem(12);
-  font-weight: normal;
-  font-family: $base-font-family;
-  color: $main;
-  line-height: 1.5;
-  @include mq('md') {
-    margin-top: rem(8);
-    color: $base;
-  }
-}
-
 .blog__items {
   margin-top: rem(30);
   @include mq('md') {

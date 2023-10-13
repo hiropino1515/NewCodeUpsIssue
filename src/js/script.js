@@ -83,9 +83,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   var swiper = new Swiper(".js-mv-swiper", {
-    // pagination: {
-    //   el: ".js-works-paginations",
-    // },
     loop: true,
     loopedSlides: 4,
     clickable: true,

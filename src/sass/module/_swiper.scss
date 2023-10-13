@@ -1,14 +1,7 @@
 @use 'global' as *;
 
 .swiper__container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-top: rem(28);
-  margin-right: calc(50% - 50vw);
-  @include mq('md') {
-    margin-top: rem(34);
-  }
+  
 }
 
 .swiper {
