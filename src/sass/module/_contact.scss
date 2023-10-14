@@ -87,7 +87,7 @@
 }
 
 .contact__info {
-  margin-top: rem(20);
+  margin-top: rem(22);
   @include mq('md') {
     margin-top: rem(32);
     display: flex;
@@ -95,7 +95,6 @@
 }
 
 .contact__meta {
-  margin-top: rem(5);
   text-align: center;
   width: 100%;
   font-size: rem(16);
@@ -104,20 +103,9 @@
   color: #0D2936;
   line-height: 1.5;
   @include mq('md') {
-    margin-top: 0;
     text-align: left;
     display: inline;
     max-width: rem(150);
-  }
-}
-
-.contact__meta-text {
-  
-}
-
-.contact__meta-text:first-child {
-  @include mq('md') {
-    margin-top: 0;
   }
 }
 
