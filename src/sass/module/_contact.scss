@@ -40,7 +40,7 @@
   }
 }
 
-.contact__content-left {
+.contact__left {
   width: 100%;
   @include mq('md') {
     padding-left: rem(50);
@@ -49,7 +49,7 @@
   }
 }
 
-.contact__content-right {
+.contact__right {
   width: 100%;
   @include mq('md') {
     padding-right: rem(50);
@@ -95,9 +95,16 @@
 }
 
 .contact__meta {
+  margin-top: rem(5);
   text-align: center;
   width: 100%;
+  font-size: rem(16);
+  font-weight: $normal;
+  font-family: $base-font-family;
+  color: #0D2936;
+  line-height: 1.5;
   @include mq('md') {
+    margin-top: 0;
     text-align: left;
     display: inline;
     max-width: rem(150);
@@ -105,12 +112,7 @@
 }
 
 .contact__meta-text {
-  margin-top: rem(5);
-  font-size: rem(16);
-  font-weight: $normal;
-  font-family: $base-font-family;
-  color: #0D2936;
-  line-height: 1.5;
+  
 }
 
 .contact__meta-text:first-child {

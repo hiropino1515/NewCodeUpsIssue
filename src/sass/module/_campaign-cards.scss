@@ -1,0 +1,11 @@
+@use 'global' as *;
+
+.campaign-cards {
+
+}
+
+.campaign-cards__item {
+  padding-bottom: rem(10);
+  padding-left: rem(10);
+  height: 100%;
+}
