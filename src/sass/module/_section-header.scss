@@ -30,13 +30,8 @@
 }
 
 .section-header__entitle--blog {
-  font-size: rem(32);
-  font-weight: normal;
-  font-family: $second-font-family;
   color: $font;
-  line-height: 1.25;
   @include mq('md') {
-    font-size: rem(40);
     color: $base;
   }
 }
@@ -50,11 +45,7 @@
 
 .section-header__jatitle--blog {
   margin-top: rem(4);
-  font-size: rem(12);
-  font-weight: normal;
-  font-family: $base-font-family;
   color: $main;
-  line-height: 1.5;
   @include mq('md') {
     margin-top: rem(8);
     color: $base;
@@ -63,21 +54,6 @@
 
 .section-header__entitle--contact {
   font-size: rem(80);
-  font-weight: $normal;
-  font-family: $second-font-family;
-  color: $font;
   line-height: 1;
-}
-
-.section-header__entitle--contact::first-letter {
-  color: $main;
-}
-
-.section-header__jatitle--contact {
-  font-size: rem(12);
-  font-weight: $normal;
-  font-family: $base-font-family;
-  color: $main;
-  line-height: 1.5;
 }
 
