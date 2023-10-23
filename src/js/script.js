@@ -146,4 +146,71 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
   });
+
+  $(function() {
+    let tabs = $(".page-campaign-tab__list"); // tabのクラスを全て取得し、変数tabsに配列で定義
+    $(".page-campaign-tab__list").on("click", function() { // tabをクリックしたらイベント発火
+      $(".is-active").removeClass("is-active"); // activeクラスを消す
+      $(this).addClass("is-active"); // クリックした箇所にactiveクラスを追加
+      // const index = tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
+      // $(".content").removeClass("show").eq(index).addClass("show"); // showクラスを消して、contentクラスのindex番目にshowクラスを追加
+    })
+  });
+
+  $(function() {
+    let tabs = $(".page-navi__item"); // tabのクラスを全て取得し、変数tabsに配列で定義
+    $(".page-navi__item").on("click", function() { // tabをクリックしたらイベント発火
+      $(".is-active").removeClass("is-active"); // activeクラスを消す
+      $(this).addClass("is-active"); // クリックした箇所にactiveクラスを追加
+      // const index = tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
+      // $(".content").removeClass("show").eq(index).addClass("show"); // showクラスを消して、contentクラスのindex番目にshowクラスを追加
+    })
+  });
+
+    // 変数に要素を入れる
+  var trigger = $('.js-modal-trigger'),
+  wrapper = $('.modal__wrapper'),
+  layer = $('.modal__layer'),
+  container = $('.modal__container'),
+  close = $('.modal__close'),
+  content = $('.modal__content');
+
+  // 『モーダルを開くボタン』をクリックしたら、『モーダル本体』を表示
+  $(trigger).click(function() {
+  $(wrapper).fadeIn(400);
+
+  // クリックした画像のHTML要素を取得して、置き換える
+  $(content).html($(this).prop('outerHTML'));
+
+  // スクロール位置を戻す
+  $(container).scrollTop(0);
+
+  // サイトのスクロールを禁止にする
+  $('html, body').css('overflow', 'hidden');
+  });
+
+  // 『背景』と『モーダルを閉じるボタン』をクリックしたら、『モーダル本体』を非表示
+  $(layer).add(close).click(function() {
+    $(wrapper).fadeOut(400);
+
+    // サイトのスクロール禁止を解除する
+    $('html, body').removeAttr('style');
+  });
+
+  // informationタブメニュー
+  $(function () {
+    // 最初のコンテンツは表示
+    $(".js-content:first-of-type").css("display", "block");
+    // タブをクリックすると
+    $(".js-tab").on("click", function () {
+      // 現在選択されているタブからcurrentを外す
+      $(".current").removeClass("current");
+      // クリックされたタブにcurrentクラスを付与
+      $(this).addClass("current");
+      // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+      const index = $(this).index();
+      // クリックしたタブのインデックス番号と同じコンテンツを表示
+      $(".js-content").hide().eq(index).fadeIn(800);
+    });
+  });
 })

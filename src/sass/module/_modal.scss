@@ -1,0 +1,32 @@
+@use 'global' as *;
+
+.modal {
+
+}
+
+/* モーダル本体 */
+.modal__wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__layer {
+  height: 100%;
+  background: rgba(32, 32, 32, 0.80);
+  cursor: pointer;
+}
+
+.modal__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  width: min(calc(100% - 2.5rem), 57.5rem);
+  max-height: calc(100% - 5rem);
+}

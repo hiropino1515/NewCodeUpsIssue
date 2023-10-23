@@ -29,6 +29,8 @@
 }
 
 .contact__contents {
+  padding-left: rem(25);
+  padding-right: rem(25);
   @include mq('md') {
     display: flex;
     align-items: center;
@@ -37,6 +39,8 @@
     max-width: rem(1080);
     padding-top: rem(80);
     padding-bottom: rem(70);
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

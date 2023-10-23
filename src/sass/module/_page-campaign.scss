@@ -1,0 +1,30 @@
+@use 'global' as *;
+
+.page-campaign {
+
+}
+
+.page-campaign__inner {
+  padding-left: rem(48);
+  padding-right: rem(47);
+}
+
+.page-campaign__container {
+
+}
+
+.page-campaign__items {
+  display: grid;
+  column-gap: rem(40);
+  row-gap: rem(40);
+  grid-template-columns: 1fr;
+  justify-items: center;
+  @include mq('md') {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: rem(80);
+  }
+}
+
+.page-campaign__item {
+  height: 100%;
+}

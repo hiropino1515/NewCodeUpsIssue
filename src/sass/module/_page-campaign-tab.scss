@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.page-campaign-tab {
+
+}
+
+.page-campaign-tab__inner {
+
+}
+
+.page-campaign-tab__list {
+  display: grid;
+  column-gap: rem(21);
+  row-gap: rem(16);
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  justify-items: center;
+  @include mq('md') {
+    column-gap: rem(32);
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: start;
+  }
+}
+
+.page-campaign-tab__menu {
+  display: inline-block;
+  font-size: rem(14);
+  font-family: $second-font-family;
+  font-weight: $normal;
+  background-color: $base;
+  color: $main;
+  line-height: 1;
+  border: 1px solid $main;
+  padding: rem(9) 0;
+  min-width: rem(162);
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.page-campaign-tab__menu.is-active {
+  background-color: $main;
+  color: $base;
+}
+
+.page-campaign-tab__menu:hover {
+  opacity: .7;
+}
+

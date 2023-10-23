@@ -1,0 +1,109 @@
+@use "global" as *;
+
+.page-information-tab {
+
+}
+
+.page-information-tab__inner {
+
+}
+
+.page-information-tab__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-information-tab__menu {
+  display: inline-block;
+  font-size: rem(14);
+  font-family: $base-font-family;
+  font-weight: $normal;
+  background-color: #DDF0F1;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  color: $main;
+  line-height: normal;
+  padding: rem(9) 0;
+  max-width: rem(102);
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  @include mq('md') {
+    max-width: rem(300);
+    padding-left: rem(71);
+    font-size: rem(24);
+    padding: rem(29) 0;
+  }
+}
+
+.page-information-tab__menu:first-child:before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: rem(30);
+  transform: translateY(-50%);
+  width: rem(63);
+  height: rem(63);
+  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+  @include mq('md') {
+    display: block;
+  }
+}
+
+.page-information-tab__menu:nth-child(2)::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: rem(15);
+  transform: translateY(-50%);
+  width: rem(63);
+  height: rem(63);
+  background-image: url(/assets/images/common/fish_nature_ocean_sea_shark_icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+  @include mq('md') {
+    display: block;
+  }
+}
+
+.page-information-tab__menu:last-child:before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: rem(30);
+  transform: translateY(-50%);
+  width: rem(63);
+  height: rem(63);
+  background-image: url(/assets/images/common/fish_ocean_project_sea_seafood_icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+  @include mq('md') {
+    display: block;
+  }
+}
+
+
+.page-information-tab__menu.current {
+  background-color: $main;
+  color: $base;
+}
+
+.page-information-tab__menu:hover {
+  opacity: .7;
+}
+
+.page-information-tab__content-group {
+  margin-top: rem(16);
+  @include mq('md') {
+    margin-top: rem(24);
+  }
+}
