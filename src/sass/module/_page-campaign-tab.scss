@@ -1,14 +1,14 @@
 @use "global" as *;
 
-.page-campaign-tab {
+.common-tab {
 
 }
 
-.page-campaign-tab__inner {
+.common-tab__inner {
 
 }
 
-.page-campaign-tab__list {
+.common-tab__list {
   display: grid;
   column-gap: rem(21);
   row-gap: rem(16);
@@ -22,7 +22,7 @@
   }
 }
 
-.page-campaign-tab__menu {
+.common-tab__menu {
   display: inline-block;
   font-size: rem(14);
   font-family: $second-font-family;
@@ -39,12 +39,12 @@
   z-index: 2;
 }
 
-.page-campaign-tab__menu.is-active {
+.common-tab__menu.is-active {
   background-color: $main;
   color: $base;
 }
 
-.page-campaign-tab__menu:hover {
+.common-tab__menu:hover {
   opacity: .7;
 }
 

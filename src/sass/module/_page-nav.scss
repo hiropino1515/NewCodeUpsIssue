@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.page-navi__items {
+.page-nav__items {
   position: relative;
   display: flex;
   align-items: center;
@@ -12,32 +12,33 @@
   width: 100%;
 }
 
-.page-navi__items::before {
+.page-nav__items::before {
   content: "";
   position: absolute;
   width: rem(38);
   height: rem(38);
   top: 0;
   left: rem(-40);
-  background-image: url(/assets/images/common/page-navi-prev.png);
+  background-image: url(/assets/images/common/page-nav-prev.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.page-navi__items::after {
+.page-nav__items::after {
   content: "";
   position: absolute;
   width: rem(38);
   height: rem(38);
   top: 0;
   right: rem(-40);
-  background-image: url(/assets/images/common/page-navi-next.png);
+  background-image: url(/assets/images/common/page-nav-next.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 
-.page-navi__item {
+.page-nav__item {
+  display: inline-block;
   padding-top: rem(10);
   padding-bottom: rem(10);
   width: rem(38);
@@ -51,7 +52,7 @@
   text-align: center;
 }
 
-.page-navi__item.is-active {
+.page-nav__item.is-active {
   color: $base;
   background-color: $main;
 }

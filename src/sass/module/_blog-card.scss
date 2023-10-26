@@ -6,12 +6,16 @@
   z-index: 1;
 }
 
-.card:hover {
+.blog-card:hover {
   opacity: .7;
 }
 
+.blog-card:hover .blog-card__image img {
+  transform: scale(1.1);
+}
 
-.blog-card__inner{
+
+.blog-card__inner {
   padding: rem(16) rem(16) rem(25);
   @include mq('md') {
     padding: rem(16) rem(16) rem(24);
@@ -20,11 +24,13 @@
 
 .blog-card__image {
   width: 100%;
+  overflow: hidden;
 }
 
 .blog-card__image img {
   aspect-ratio: 301 / 201;
   object-fit: cover;
+  transition: transform .6s ease;
 }
 
 .blog-card__head {

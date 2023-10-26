@@ -1,0 +1,58 @@
+@use "global" as *;
+
+
+.popular-articles-card {
+  position: relative;
+  background: $base;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.popular-articles-card:hover {
+  opacity: .7;
+}
+
+.popular-articles-card:hover .popular-articles-card__image img {
+  transform: scale(1.1);
+}
+
+.popular-articles-card__link {
+
+}
+
+
+.popular-articles-card__inner{
+  padding: rem(16);
+  display: flex;
+  gap: rem(16);
+}
+
+.popular-articles-card__image {
+  width: 50%;
+  overflow: hidden;
+}
+
+.popular-articles-card__image img {
+  aspect-ratio: 121 / 90;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+
+.popular-articles-card__body {
+  width: 50%;
+}
+
+.popular-articles-card__date {
+  font-family: $third-font-family;
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+
+.popular-articles-card__title {
+  font-size: rem(16);
+  font-weight: 500;
+  font-family: $base-font-family;
+  line-height: normal;
+}

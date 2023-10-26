@@ -46,7 +46,7 @@
   transform: translateY(-50%);
   width: rem(63);
   height: rem(63);
-  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon.png);
+  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon2.png);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 3;
@@ -97,6 +97,20 @@
   color: $base;
 }
 
+.page-information-tab__menu.current::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: rem(30);
+  transform: translateY(-50%);
+  width: rem(63);
+  height: rem(63);
+  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+}
+
 .page-information-tab__menu:hover {
   opacity: .7;
 }
@@ -106,4 +120,8 @@
   @include mq('md') {
     margin-top: rem(24);
   }
+}
+
+.page-information-tab__content-box {
+  display: none;
 }

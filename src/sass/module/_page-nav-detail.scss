@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.page-nav-detail__inner {
+  display: flex;
+  justify-content: center;
+  gap: rem(82);
+}
+
+.page-nav-detail__left {
+  display: block;
+  width: rem(38);
+  height: rem(38);
+  border: 1px solid $main;
+  background-color: $base;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.page-nav-detail__left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: rem(12);
+  height: rem(12);
+  border-left: 1px solid $main;
+  border-bottom: 1px solid $main;
+}
+
+.page-nav-detail__left:hover {
+  background-color: $main;
+}
+
+.page-nav-detail__left:hover.page-nav-detail__left::after {
+  border-left: 1px solid $base;
+  border-bottom: 1px solid $base;
+}
+
+.page-nav-detail__right {
+  display: block;
+  width: rem(38);
+  height: rem(38);
+  border: 1px solid $main;
+  background-color: $base;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.page-nav-detail__right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: rem(12);
+  height: rem(12);
+  border-right: 1px solid $main;
+  border-top: 1px solid $main;
+}
+
+.page-nav-detail__right:hover {
+  background-color: $main;
+}
+
+.page-nav-detail__right:hover.page-nav-detail__right::after {
+  border-right: 1px solid $base;
+  border-top: 1px solid $base;
+}
+

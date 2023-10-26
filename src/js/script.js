@@ -213,4 +213,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $(".js-content").hide().eq(index).fadeIn(800);
     });
   });
+
+  // アーカイブメニュー
+  $(function(){
+    $(".archive__menu dt").on("click", function() {
+      $(this).next().slideToggle();
+      $(".is-active").removeClass("is-active"); // activeクラスを消す
+      $(this).addClass("is-active"); // クリックした箇所にactiveクラスを追加
+    });
+  });
+
 })
