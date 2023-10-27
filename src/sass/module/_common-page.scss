@@ -1,19 +1,19 @@
 @use 'global' as *;
 
-.page-campaign {
+.common-page {
 
 }
 
-.page-campaign__inner {
+.common-page__inner {
   padding-left: rem(48);
   padding-right: rem(47);
 }
 
-.page-campaign__container {
+.common-page__container {
 
 }
 
-.page-campaign__items {
+.common-page__items {
   display: grid;
   column-gap: rem(40);
   row-gap: rem(40);
@@ -25,6 +25,6 @@
   }
 }
 
-.page-campaign__item {
+.common-page__item {
   height: 100%;
 }

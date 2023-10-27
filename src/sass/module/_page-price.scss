@@ -1,0 +1,144 @@
+@use "global" as *;
+
+.page-price {
+
+}
+
+.page-price__inner {
+  max-width: rem(600);
+  padding-left: rem(40);
+  padding-right: rem(40);
+  @include mq('md') {
+    max-width: rem(700);
+  }
+}
+
+.page-price__contents {
+  
+}
+
+
+.page-price__items {
+  
+}
+
+.page-price__item {
+  width: 100%;
+  border: 1px solid $main;
+  @include mq('md') {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.page-price__item:not(:first-child) {
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+
+.page-price__item-header {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  justify-content: center;
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  background-color: $main;
+  width: 100%;
+  @include mq('md') {
+    flex-direction: column-reverse;
+    width: 28.6%;
+  }
+}
+
+.page-price__item-icon {
+  width: rem(24);
+  height: rem(24);
+  @include mq('md') {
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.page-price__item-icon img {
+  object-fit: cover;
+}
+
+.page-price__item-title {
+  font-size: rem(16);
+  font-weight: $bold;
+  font-family: $base-font-family;
+  line-height: 1.5;
+  color: $base;
+}
+.page-price__course {
+  width: 100%;
+  @include mq('md') {
+    width: 71.7%;
+  }
+}
+
+.page-price__course-wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  @include mq('md') {
+    padding-top: rem(18);
+    padding-bottom: rem(18);
+  }
+}
+
+.page-price__course-wrapper:not(:last-child) {
+  border-bottom: 1px solid $main;
+}
+
+.page-price__course-wrapper--license {
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+}
+
+.page-price__course-name {
+  width: 64%;
+  text-align: center;
+  font-size: rem(14);
+  font-weight: $normal;
+  font-family: $base-font-family;
+  line-height: 1.7142;
+  color: #0D2936;
+  @include mq('md') {
+    font-size: rem(16);
+  }
+}
+
+.page-price__course-charge {
+  width: 36%;
+  display: inline-block;
+  text-align: right;
+  padding-right: rem(16);
+  font-size: rem(14);
+  font-weight: $normal;
+  font-family: $base-font-family;
+  line-height: 1.7142;
+  color: #0D2936;
+  position: relative;
+  @include mq('md') {
+    font-size: rem(16);
+  }
+}
+
+.page-price__course-charge::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: rem(1);
+  height: rem(65);
+  background-color: $main;
+}
+
