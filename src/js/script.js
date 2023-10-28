@@ -223,4 +223,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
+  // アコーディオン
+  $(function () {
+    // 最初は開いた状態に
+    $(".page-faq__accordion .js-accordion").addClass("open");
+    // タイトルをクリックすると
+    $(".js-accordion").on("click", function () {
+      // クリックした次の要素を開閉
+      $(this).next().slideToggle(300);
+      // タイトルにopenクラスを付け外ししてプラスマイナスを変更
+      $(this).toggleClass("close", 300);
+    });
+  });
+
 })

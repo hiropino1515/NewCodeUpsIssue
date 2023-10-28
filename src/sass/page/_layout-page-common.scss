@@ -1,7 +1,6 @@
 @use "global" as *;
 
-
-.layout-common-tab {
+.layout-page-common {
   margin-top: rem(52);
   @include mq('md') {
     margin-top: rem(150);
