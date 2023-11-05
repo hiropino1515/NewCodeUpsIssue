@@ -1,0 +1,15 @@
+@use 'global' as *;
+
+.breadcrumb-page-404 {
+  padding-top: rem(88);
+  background-color: $main;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.4286;
+  font-family: $base-font-family;
+  color: $base;
+  @include mq('md') {
+    padding-top: rem(98);
+  }
+}
+

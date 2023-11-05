@@ -236,4 +236,52 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
+  // コンタクトフォームのバリデーション
+  $(document).ready(function () {
+    $('#myForm').validate({
+      rules: {
+        name: {
+          required: true,
+        },
+        mail_address: {
+          required: true,
+          email: true,
+        },
+        tel: {
+          required: true,
+        },
+        contents: {
+          required: true,
+        }
+      },
+      messages: {
+        name: {
+          required: '※必須項目が入力されていません。入力してください。',
+        },
+        mail_address: {
+          required: '※必須項目が入力されていません。入力してください。',
+          email: '',
+        },
+        tel: {
+          required: '※必須項目が入力されていません。入力してください。',
+        },
+        contents: {
+          required: '※必須項目が入力されていません。入力してください。',
+        },
+      },
+      errorPlacement: function (error, element) {
+        error.insertBefore(element.closest(".form__item"));
+        error.addClass("error"); // エラーメッセージに "error" クラスを追加
+        element.addClass("error-input"); // エラーがある場合にカスタムクラスを追加
+        // error.css("position", "relative"); // エラーメッセージの位置を相対位置に設定
+        // error.css("top", "-40px"); // 上に40px移動
+        // error.css("left", "50%"); // 中央よせ
+        // error.css("transform", "translateX(-50%)");
+      },
+      submitHandler: function (form) {
+        // フォームがバリデーションを通過した場合の処理
+        // この中でフォームを送信するか、他のカスタム処理を実行できます
+      }
+    });
+  });
 })

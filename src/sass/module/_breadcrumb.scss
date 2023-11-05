@@ -3,8 +3,8 @@
 .breadcrumb {
   position: relative;
   font-size: rem(14);
-  font-weight: normal;
-  line-height: normal;
+  font-weight: $normal;
+  line-height: 1.4286;
   font-family: $base-font-family;
   color: $font;
 }
@@ -16,14 +16,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   top: rem(48);
-  left: calc(50% - min(48vw ,40rem));
+  left: calc(50% - min(48vw ,39rem));
   width: rem(120);
   height: rem(55);
   z-index: 1;
   @include mq('md') {
     background-image: url(/assets/images/common/kingyohanadai.png);
-    top: rem(70);
+    top: rem(102);
     width: rem(301);
     height: rem(138);
+  }
+}
+
+.breadcrumb--sitemap::after {
+  @include mq('md') {
+    background-image: none;
   }
 }

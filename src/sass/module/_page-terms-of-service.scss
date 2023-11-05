@@ -1,0 +1,44 @@
+@use 'global' as *;
+
+.terms-of-service {
+
+}
+
+.terms-of-service__inner {
+  max-width: rem(600);
+  @include mq('md') {
+    max-width: rem(800);
+  }
+}
+
+.terms-of-service__title {
+  color: $font;
+  font-family: $base-font-family;
+  font-size: rem(24);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4583;
+  @include mq('md') {
+    font-size: rem(32);
+    line-height: 1.4735;
+  }
+}
+
+.terms-of-service__contents {
+  margin-top: rem(40);
+  color: $font;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 2;
+}
+
+.u-blank-line {
+  margin-bottom: rem(32);
+}
+
+.terms-of-service__list {
+  list-style-type: decimal;
+  list-style-position: inside;
+}

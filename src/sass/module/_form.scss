@@ -96,14 +96,22 @@ button,
 	border: none;
 	border-radius: 0;
 	/*↓カスタム */
-	padding: $padding-und-btn $padding-lnr-btn;
-	background: $back-cr-btn;
-	color: $font-cr-btn;
-	font-size: $fz-btn;
+	padding: rem(20) 0;
+	background: $main;
+	color: $base;
+	font-family: $second-font-family;
+  font-weight: $normal;
+	font-size: rem(14);
+	max-width: rem(202);
+  width: 100%;
 	cursor: pointer;
 	transition: 0.3s ease;
-  border-radius: $border-r-btn;
+  border: 1px solid $main;
   line-height: 1;
+	background-image: url(/dist/assets/images/common/button-arrow.png);
+  background-size: rem(22) rem(22);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
 }
 
 [type="checkbox"] {
@@ -280,6 +288,54 @@ textarea {
   font-size: rem(16);
   font-weight: $normal;
   line-height: 1.4375;
+	.error{
+		display: block;
+		font-size: 12px;
+		font-weight: bold;
+		color: red;
+		margin: 10px 0 0;
+	}
+}
+
+.form__item-agreement {
+	text-align: center;
+  margin-top: rem(64);
+  @include mq('md') {
+    margin-top: rem(110);
+    max-width: rem(700);
+  }
+}
+
+.form__item-agreement span {
+  padding-left: rem(38);
+  color: $font;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.57143;
+	position: relative;
+
+  &::before {
+		content: "";
+    width: rem(22);
+    height: rem(22);
+  }
+
+  &::after {
+		content: "";
+		position: absolute;
+    width: rem(16);
+    height: rem(8);
+  }
+}
+
+.form__item-button {
+	margin-top: rem(24);
+  text-align: center;
+  position: relative;
+  @include mq('md') {
+    margin-top: rem(42);
+  }
 }
 
 .form__select {
@@ -298,3 +354,35 @@ textarea {
     margin-top: 0;
   }
 }
+
+.error {
+	margin-bottom: rem(40);
+	color: #C94800;
+	font-family: $base-font-family;
+	font-size: rem(14);
+	font-style: normal;
+	font-weight: $normal;
+	line-height: calc(20 /14);
+}
+
+.error-input {
+  background-color: rgba(201, 72, 0, 0.20);
+	border: 1px solid #C94800;
+}
+
+.error-input::placeholder {
+	color: $base;
+	text-align: left;
+}
+
+.form__error {
+	position: relative;
+  left: 50%; /* 中央よせ */
+  transform: translateX(-50%); /* 中央よせ */
+}
+
+
+
+
+
+

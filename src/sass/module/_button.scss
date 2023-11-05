@@ -17,6 +17,23 @@
   z-index: 1;
 }
 
+.button--page-404 {
+  display: inline-block;
+  font-size: rem(14);
+  font-family: $second-font-family;
+  font-weight: $normal;
+  color: $main;
+  background-color: $base;
+  border: 1px solid $base;
+  line-height: 1;
+  padding: rem(20) 0;
+  max-width: rem(202);
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
 .button::after {
   content: "";
   position: absolute;
@@ -31,15 +48,41 @@
   z-index: -1;
 }
 
+.button--page-404::after {
+  content: "";
+  position: absolute;
+  background-color: $main;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+
 .button:hover {
   color: $main;
+}
+
+.button--page-404:hover {
+  color: $base;
 }
 
 .button:hover::after {
   transform: scale(1, 1);
 }
 
+// .button--page-404::after {
+//   transform: scale(1, 1);
+// }
+
 .button:hover::before {
+  z-index: -1;
+}
+
+.button--page-404:hover::before {
   z-index: -1;
 }
 
@@ -54,6 +97,17 @@
   z-index: -2;
 }
 
+.button--page-404::before {
+  content: "";
+  position: absolute;
+  top: rem(4);
+  left: rem(4);
+  bottom: rem(-4);
+  right: rem(-4);
+  border: 1px solid $base;
+  z-index: -2;
+}
+
 .button span {
   margin-left: rem(8);
   display: inline-block;
@@ -64,8 +118,22 @@
   transform: skew(45deg);
 }
 
+.button--page-404 span {
+  margin-left: rem(8);
+  display: inline-block;
+  width: rem(40);
+  height: rem(6);
+  border-bottom: 1px solid $main;
+  border-right: 1px solid $main;
+  transform: skew(45deg);
+}
+
 .button:hover span {
   border-bottom: 1px solid $main;
   border-right: 1px solid $main;
 }
 
+.button--page-404:hover span {
+  border-bottom: 1px solid $base;
+  border-right: 1px solid $base;
+}
