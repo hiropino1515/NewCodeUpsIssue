@@ -1,23 +1,23 @@
 @use "global" as *;
 
-.page-blog-detail {
+.single {
 
 }
 
-.page-blog-detail__inner {
+.single__inner {
   @include mq('md') {
     display: flex;
     gap: rem(80);
   }
 }
 
-.page-blog-detail__content {
+.single__content {
   @include mq('md') {
     width: 66.7%;
   }
 }
 
-.page-blog-detail__date {
+.single__date {
   font-family: $third-font-family;
   font-size: rem(14);
   font-weight: normal;
@@ -25,7 +25,7 @@
   color: $font;
 }
 
-.page-blog-detail__title {
+.single__title {
   margin-top: rem(8);
   font-family: $base-font-family;
   font-size: rem(24);
@@ -35,11 +35,11 @@
   border-bottom: 1px solid $main;
 }
 
-.page-blog-detail__image {
+.single__image {
   margin-top: rem(24);
 }
 
-.page-blog-detail__image img {
+.single__image img {
   aspect-ratio: 345 / 231;
   object-fit: cover;
   @include mq('md') {
@@ -47,7 +47,7 @@
   }
 }
 
-.page-blog-detail__text {
+.single__text {
   margin-top: rem(24);
   font-family: $base-font-family;
   font-size: rem(16);
@@ -56,11 +56,11 @@
   color: black;
 }
 
-.page-blog-detail__lists {
+.single__lists {
   margin-top: rem(24);
 }
 
-.page-blog-detail__list {
+.single__list {
   padding-left: rem(27);
   font-family: $base-font-family;
   font-size: rem(16);
@@ -70,7 +70,7 @@
   position: relative;
 }
 
-.page-blog-detail__list::before {
+.single__list::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -78,19 +78,19 @@
   left: 0;
   width: rem(18);
   height: rem(18);
-  background-image: url(/assets/images/common/hitode-page-blog-detail.png);
+  background-image: url(/assets/images/common/hitode-single.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 
 
-.page-blog-detail__nav {
+.single__nav {
   padding-left: rem(24);
   padding-right: rem(25);
 }
 
-.page-blog-detail__sidebar {
+.single__sidebar {
   margin-top: rem(80);
   @include mq('md') {
     margin-top: 0;

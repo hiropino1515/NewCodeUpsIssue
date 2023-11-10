@@ -74,9 +74,9 @@
   transform: scale(1, 1);
 }
 
-// .button--page-404::after {
-//   transform: scale(1, 1);
-// }
+.button--page-404:hover::after {
+  transform: scale(1, 1);
+}
 
 .button:hover::before {
   z-index: -1;

@@ -1,12 +1,12 @@
 @use "global" as *;
 
-.page-nav-detail__inner {
+.single-page-nav__inner {
   display: flex;
   justify-content: center;
   gap: rem(82);
 }
 
-.page-nav-detail__left {
+.single-page-nav__prev {
   display: block;
   width: rem(38);
   height: rem(38);
@@ -16,7 +16,7 @@
   transition: all 0.3s;
 }
 
-.page-nav-detail__left::after {
+.single-page-nav__prev::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -28,16 +28,16 @@
   border-bottom: 1px solid $main;
 }
 
-.page-nav-detail__left:hover {
+.single-page-nav__prev:hover {
   background-color: $main;
 }
 
-.page-nav-detail__left:hover.page-nav-detail__left::after {
+.single-page-nav__prev:hover.single-page-nav__prev::after {
   border-left: 1px solid $base;
   border-bottom: 1px solid $base;
 }
 
-.page-nav-detail__right {
+.single-page-nav__next {
   display: block;
   width: rem(38);
   height: rem(38);
@@ -47,7 +47,7 @@
   transition: all 0.3s;
 }
 
-.page-nav-detail__right::after {
+.single-page-nav__next::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -59,11 +59,11 @@
   border-top: 1px solid $main;
 }
 
-.page-nav-detail__right:hover {
+.single-page-nav__next:hover {
   background-color: $main;
 }
 
-.page-nav-detail__right:hover.page-nav-detail__right::after {
+.single-page-nav__next:hover.single-page-nav__next::after {
   border-right: 1px solid $base;
   border-top: 1px solid $base;
 }

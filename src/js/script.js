@@ -236,52 +236,86 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
-  // コンタクトフォームのバリデーション
+  // ==========================================================================
+// お問い合わせフォームエラーメッセージ
+// ==========================================================================
   $(document).ready(function () {
-    $('#myForm').validate({
+    // ページ読み込み時に実行される関数
+
+    $('.form__error').hide(); // 最初はエラーメッセージを非表示に
+
+    $('form').validate({
+      // フォームのバリデーションを設定
+
       rules: {
         name: {
-          required: true,
+          required: true, // 名前が必須
         },
         mail_address: {
-          required: true,
-          email: true,
+          required: true, // メールアドレスが必須
+          email: true, // メールアドレスの形式チェック
         },
         tel: {
-          required: true,
+          required: true, // 電話番号が必須
         },
         contents: {
-          required: true,
+          required: true, // お問い合わせ内容が必須
+        },
+        privacy: {
+          required: true, // プライバシーポリシーに同意が必須
         }
       },
       messages: {
         name: {
-          required: '※必須項目が入力されていません。入力してください。',
+          required: '※必須項目が入力されていません。<br class="u-mobile">　入力してください.',
         },
         mail_address: {
-          required: '※必須項目が入力されていません。入力してください。',
-          email: '',
+          required: '※必須項目が入力されていません。<br class="u-mobile">　入力してください.',
+          email: '正しいメールアドレスの形式で入力してください.', // メールアドレスの形式エラーメッセージ
         },
         tel: {
-          required: '※必須項目が入力されていません。入力してください。',
+          required: '※必須項目が入力されていません。<br class="u-mobile">　入力してください.',
         },
         contents: {
-          required: '※必須項目が入力されていません。入力してください。',
+          required: '※必須項目が入力されていません。<br class="u-mobile">　入力してください.',
         },
+        privacy: {
+          required: 'プライバシーポリシーに同意する必要があります.', // プライバシーポリシーの同意エラーメッセージ
+        }
       },
-      errorPlacement: function (error, element) {
-        error.insertBefore(element.closest(".form__item"));
-        error.addClass("error"); // エラーメッセージに "error" クラスを追加
-        element.addClass("error-input"); // エラーがある場合にカスタムクラスを追加
-        // error.css("position", "relative"); // エラーメッセージの位置を相対位置に設定
-        // error.css("top", "-40px"); // 上に40px移動
-        // error.css("left", "50%"); // 中央よせ
-        // error.css("transform", "translateX(-50%)");
-      },
-      submitHandler: function (form) {
-        // フォームがバリデーションを通過した場合の処理
-        // この中でフォームを送信するか、他のカスタム処理を実行できます
+      errorPlacement: function (err, elem) {
+        // エラーメッセージの表示場所とスタイリングをカスタマイズ
+        if (elem.attr('name') === 'privacy') {
+          // プライバシーポリシーのチェックボックスの場合、エラーメッセージをその要素の隣に表示
+          err.insertAfter(elem);
+          // エラーがある場合、placeholderの色を白に変更
+          elem.css('color', 'white');
+        } else {
+          // その他の要素は通常通り表示
+          elem.addClass('js-invalid');
+          $('.form__error').show(); // エラーメッセージを表示
+          $('.js-error').html(err);
+        }
+      }
+    });
+
+    $('form').submit(function () {
+      // フォームが送信されたときの処理
+      if (!$('form').valid()) {
+        // フォームがバリデーションを通過しない場合
+        $('.js-error').show(); // エラーメッセージを表示
+        return false; // フォーム送信を阻止
+      }
+    });
+    $('form').submit(function () {
+      if (!$('form').valid()) {
+        return false;
+      } else {
+        window.location.href = "page-contact-thanks.html"; // 送信成功時にリダイレクト
+        return false; // フォームの送信を阻止
       }
     });
   });
+
+
 })
