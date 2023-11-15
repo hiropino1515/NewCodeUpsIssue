@@ -6,7 +6,7 @@
 
 .page-404__inner {
   position: relative;
-  padding-top: rem(40);
+  padding-top: rem(50);
   padding-bottom: rem(40);
   max-width: rem(600);
   @include mq('md') {
@@ -17,13 +17,11 @@
 
 .page-404__image {
   position: absolute;
-  top: 0;
+  top: rem(-26);
   max-width: rem(345);
-  max-height: rem(345);
   @include mq('md') {
     max-width: rem(665);
-    max-height: rem(593);
-    left: 0;
+    left: rem(32);
   }
 }
 
@@ -38,7 +36,7 @@
 .page-404__title {
   color: $base;
   text-align: center;
-  font-family: $second-font-family;
+  font-family: $base-font-family;
   font-size: rem(80);
   font-style: normal;
   font-weight: $normal;

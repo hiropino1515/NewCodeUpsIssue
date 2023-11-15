@@ -42,3 +42,10 @@
     line-height: 1.25;
   }
 }
+
+.sub-mv__title--page-terms-of-service {
+  font-size: rem(38);
+  @include mq('md') {
+    font-size: rem(75);
+  }
+}

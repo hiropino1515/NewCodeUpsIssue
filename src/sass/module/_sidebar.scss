@@ -7,6 +7,10 @@
 .sidebar__inner {
   padding-left: rem(25);
   padding-right: rem(26);
+  @include mq('md') {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .sidebar__content {

@@ -1,41 +1,38 @@
 @use "global" as *;
 
-.page-nav__items {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: rem(12);
-  max-width: rem(444);
+.page-nav__inner {
+  min-width: rem(344);
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mq('md') {
+    max-width: rem(444);
+  }
 }
 
-.page-nav__items::before {
-  content: "";
-  position: absolute;
+.page-nav__arrow-left {
   width: rem(38);
   height: rem(38);
-  top: 0;
-  left: rem(-40);
   background-image: url(/assets/images/common/page-nav-prev.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.page-nav__items::after {
-  content: "";
-  position: absolute;
+.page-nav__arrow-right {
   width: rem(38);
   height: rem(38);
-  top: 0;
-  right: rem(-40);
   background-image: url(/assets/images/common/page-nav-next.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.page-nav__items {
+  display: flex;
+  align-items: center;
+  gap: rem(12);
+}
 
 .page-nav__item {
   display: inline-block;
@@ -50,6 +47,10 @@
   font-weight: $bold;
   line-height: 1;
   text-align: center;
+}
+
+.page-nav__item:first-child {
+  margin-left: 0;
 }
 
 .page-nav__item.is-active {

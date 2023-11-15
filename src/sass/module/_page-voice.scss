@@ -1,19 +1,20 @@
 @use 'global' as *;
 
-.common-page {
+.page-voice {
 
 }
 
-.common-page__inner {
-  padding-left: rem(48);
-  padding-right: rem(47);
+.page-voice__inner {
+  max-width: rem(600);
+  // padding-left: rem(48);
+  // padding-right: rem(47);
 }
 
-.common-page__container {
+.page-voice__container {
 
 }
 
-.common-page__items {
+.page-voice__items {
   display: grid;
   column-gap: rem(40);
   row-gap: rem(40);
@@ -25,6 +26,6 @@
   }
 }
 
-.common-page__item {
+.page-voice__item {
   height: 100%;
 }

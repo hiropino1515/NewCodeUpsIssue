@@ -146,16 +146,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
   });
+  // commonタブメニュー
+  $(function(){
+    $('.common-tab__menu').on('click', function(){
+      let index = $('.common-tab__menu').index(this);
 
-  $(function() {
-    let tabs = $(".page-campaign-tab__list"); // tabのクラスを全て取得し、変数tabsに配列で定義
-    $(".page-campaign-tab__list").on("click", function() { // tabをクリックしたらイベント発火
-      $(".is-active").removeClass("is-active"); // activeクラスを消す
-      $(this).addClass("is-active"); // クリックした箇所にactiveクラスを追加
-      // const index = tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
-      // $(".content").removeClass("show").eq(index).addClass("show"); // showクラスを消して、contentクラスのindex番目にshowクラスを追加
-    })
-  });
+      $('.common-tab__menu').removeClass('is-active');
+      $(this).addClass('is-active');
+      $('.tab-contents').removeClass('is-contents-active');
+      $('.tab-contents').eq(index).addClass('is-contents-active');
+    });
+  }); 
 
   $(function() {
     let tabs = $(".page-navi__item"); // tabのクラスを全て取得し、変数tabsに配列で定義

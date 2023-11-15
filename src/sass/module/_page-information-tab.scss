@@ -5,7 +5,10 @@
 }
 
 .page-information-tab__inner {
-
+  max-width: rem(600);
+  @include mq('md') {
+    
+  }
 }
 
 .page-information-tab__list {

@@ -32,6 +32,20 @@
   }
 }
 
+.campaign-card__inner--page-campaign {
+  padding: rem(16) rem(16) rem(24);
+  @include mq('md') {
+    padding: rem(18) rem(16) rem(26);
+  }
+}
+
+.campaign-card__inner--lower-page {
+  padding: rem(8) rem(16) rem(26);
+  @include mq('md') {
+    padding: rem(12) rem(16) rem(24);
+  }
+}
+
 .campaign-card__head {
   flex-grow: 1;
 }
@@ -60,11 +74,38 @@
   padding-bottom: rem(8);
 }
 
+.campaign-card__title--page-campaign {
+  font-size: rem(18);
+  @include mq('md') {
+    font-size: rem(24);
+  }
+}
+
+.campaign-card__title--lower-page {
+  text-align: center;
+  font-size: rem(16);
+}
+
 .campaign-card__body {
   margin-top: rem(8);
   text-align: center;
   @include mq('md') {
     margin-top: rem(16);
+  }
+}
+
+.campaign-card__body--page-campaign {
+  margin-top: rem(8);
+  @include mq('md') {
+    margin-top: rem(22);
+  }
+}
+
+
+.campaign-card__body--lower-page {
+  margin-top: rem(8);
+  @include mq('md') {
+    margin-top: rem(8);
   }
 }
 
@@ -81,9 +122,9 @@
   align-items: flex-end;
   justify-content: center;
   gap: rem(16);
-  @include mq('md') {
-    justify-content: space-around;
-  }
+  // @include mq('md') {
+  //   justify-content: space-around;
+  // }
 }
 
 .campaign-card__price-before {
@@ -110,10 +151,11 @@
   }
 }
 
-.campaign-card__detail {
-  // display: flex;
-  // flex-direction: column;
-  // flex-grow: 1;
+.campaign-card__price-after--lower-page {
+  font-size: rem(32);
+  @include mq('md') {
+    font-size: rem(32);
+  }
 }
 
 .campaign-card__text {

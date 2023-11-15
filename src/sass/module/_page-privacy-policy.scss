@@ -7,7 +7,7 @@
 .privacy-policy__inner {
   max-width: rem(600);
   @include mq('md') {
-    max-width: rem(800);
+    max-width: rem(848);
   }
 }
 
@@ -35,6 +35,8 @@
 }
 
 .privacy-policy__list {
+  padding-left: rem(24);
   list-style-type: decimal;
-  list-style-position: inside;
+  list-style-position: outside;
+  line-break: strict;
 }

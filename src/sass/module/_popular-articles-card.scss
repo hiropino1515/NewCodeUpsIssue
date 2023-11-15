@@ -21,7 +21,7 @@
 
 
 .popular-articles-card__inner{
-  padding: rem(16);
+  padding: rem(15);
   display: flex;
   gap: rem(16);
 }
@@ -40,6 +40,9 @@
 
 .popular-articles-card__body {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .popular-articles-card__date {

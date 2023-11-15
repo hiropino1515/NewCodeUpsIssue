@@ -1,0 +1,34 @@
+@use 'global' as *;
+
+.page-campaign {
+
+}
+
+.page-campaign__inner {
+  max-width: rem(600);
+}
+
+.page-campaign__container {
+  padding-left: rem(33);
+  padding-right: rem(32);
+  @include mq('md') {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.page-campaign__items {
+  display: grid;
+  column-gap: rem(40);
+  row-gap: rem(40);
+  grid-template-columns: 1fr;
+  justify-items: center;
+  @include mq('md') {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: rem(80);
+  }
+}
+
+.page-campaign__item {
+  height: 100%;
+}

@@ -5,15 +5,16 @@
 }
 
 .single__inner {
+  max-width: rem(600);
   @include mq('md') {
     display: flex;
-    gap: rem(80);
+    gap: rem(85);
   }
 }
 
 .single__content {
   @include mq('md') {
-    width: 66.7%;
+    width: 64.8%;
   }
 }
 
@@ -33,10 +34,16 @@
   line-height: normal;
   color: $font;
   border-bottom: 1px solid $main;
+  @include mq('md') {
+    font-size: rem(32);
+  }
 }
 
 .single__image {
   margin-top: rem(24);
+  @include mq('md') {
+    margin-top: rem(32);
+  }
 }
 
 .single__image img {
@@ -54,10 +61,16 @@
   font-weight: normal;
   line-height: 1.5;
   color: black;
+  @include mq('md') {
+    margin-top: rem(48);
+  }
 }
 
 .single__lists {
   margin-top: rem(24);
+  @include mq('md') {
+    margin-top: rem(32);
+  }
 }
 
 .single__list {
@@ -94,6 +107,6 @@
   margin-top: rem(80);
   @include mq('md') {
     margin-top: 0;
-    width: 33.3%;
+    width: 27.222%;
   }
 }

@@ -348,6 +348,11 @@ textarea {
   font-weight: $normal;
   line-height: 1.57143;
 	position: relative;
+	left: rem(24);
+	margin: 0;
+	@include mq('md') {
+		left: 0;
+	}
 
   &::before {
 		content: "";

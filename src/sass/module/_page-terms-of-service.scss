@@ -1,17 +1,17 @@
 @use 'global' as *;
 
-.terms-of-service {
+.page-terms-of-service {
 
 }
 
-.terms-of-service__inner {
+.page-terms-of-service__inner {
   max-width: rem(600);
   @include mq('md') {
-    max-width: rem(800);
+    max-width: rem(848);
   }
 }
 
-.terms-of-service__title {
+.page-terms-of-service__title {
   color: $font;
   font-family: $base-font-family;
   font-size: rem(24);
@@ -24,7 +24,7 @@
   }
 }
 
-.terms-of-service__contents {
+.page-terms-of-service__contents {
   margin-top: rem(40);
   color: $font;
   font-family: $base-font-family;
@@ -34,7 +34,8 @@
   line-height: 2;
 }
 
-.terms-of-service__list {
+.page-terms-of-service__list {
+  padding-left: rem(22);
   list-style-type: decimal;
-  list-style-position: inside;
+  list-style-position: outside;
 }

@@ -6,3 +6,74 @@
     margin-top: rem(140);
   }
 }
+
+.layout-contact--page-campaign {
+  margin-top: rem(112);
+  @include mq('md') {
+    margin-top: rem(140);
+  }
+}
+
+.layout-contact--page-about {
+  margin-top: rem(112);
+  @include mq('md') {
+    margin-top: rem(140);
+  }
+}
+
+.layout-contact--page-information {
+  margin-top: rem(112);
+  @include mq('md') {
+    margin-top: rem(140);
+  }
+}
+
+.layout-contact--single {
+  margin-top: rem(116);
+  @include mq('md') {
+    margin-top: rem(140);
+  }
+}
+
+
+
+.layout-contact--page-voice {
+  margin-top: rem(110);
+  @include mq('md') {
+    margin-top: rem(140);
+  }
+}
+
+.layout-contact--page-price {
+  margin-top: rem(110);
+  @include mq('md') {
+    margin-top: rem(140);
+  }
+}
+
+.layout-contact--page-faq {
+  margin-top: rem(110);
+  @include mq('md') {
+    margin-top: rem(140);
+  }
+}
+
+.layout-contact--page-sitemap {
+  margin-top: rem(92);
+  @include mq('md') {
+    margin-top: rem(127);
+  }
+}
+
+.layout-contact--page-privacy-policy {
+  margin-top: rem(112);
+  @include mq('md') {
+    margin-top: rem(140);
+  }
+}
+.layout-contact--page-terms-of-service {
+  margin-top: rem(112);
+  @include mq('md') {
+    margin-top: rem(140);
+  }
+}
