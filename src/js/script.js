@@ -148,15 +148,26 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
   // commonタブメニュー
   $(function(){
+    // 最初にALLタブのコンテンツを表示する
+    $('.tab-contents').addClass('is-contents-active');
+
     $('.common-tab__menu').on('click', function(){
       let index = $('.common-tab__menu').index(this);
 
       $('.common-tab__menu').removeClass('is-active');
       $(this).addClass('is-active');
-      $('.tab-contents').removeClass('is-contents-active');
-      $('.tab-contents').eq(index).addClass('is-contents-active');
+
+      if ($(this).hasClass('all')) {
+        // "ALL"タブがクリックされた場合
+        $('.tab-contents').addClass('is-contents-active');
+      } else {
+        // 他のタブがクリックされた場合
+        $('.tab-contents').removeClass('is-contents-active');
+        $('.tab-contents').eq(index).addClass('is-contents-active');
+      }
     });
-  }); 
+  });
+
 
   $(function() {
     let tabs = $(".page-navi__item"); // tabのクラスを全て取得し、変数tabsに配列で定義

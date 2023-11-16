@@ -48,3 +48,11 @@
   opacity: .7;
 }
 
+// 追加された .is-contents-active クラスに基づくスタイルを追加
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.is-contents-active {
+  display: block;
+}
