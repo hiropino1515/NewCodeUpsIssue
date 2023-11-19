@@ -37,6 +37,13 @@
   text-align: center;
   position: relative;
   z-index: 2;
+  transition: .3s;
+}
+
+.common-tab__menu:hover {
+  cursor: pointer;
+  background-color: $main;
+  color: $base;
 }
 
 .common-tab__menu.is-active {
@@ -44,15 +51,4 @@
   color: $base;
 }
 
-.common-tab__menu:hover {
-  opacity: .7;
-}
 
-// 追加された .is-contents-active クラスに基づくスタイルを追加
-.tab-contents {
-  display: none;
-}
-
-.tab-contents.is-contents-active {
-  display: block;
-}

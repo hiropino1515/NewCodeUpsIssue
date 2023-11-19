@@ -146,40 +146,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
   });
-  // commonタブメニュー
-  $(function(){
-    // 最初にALLタブのコンテンツを表示する
-    $('.tab-contents').addClass('is-contents-active');
 
-    $('.common-tab__menu').on('click', function(){
-      let index = $('.common-tab__menu').index(this);
-
-      $('.common-tab__menu').removeClass('is-active');
-      $(this).addClass('is-active');
-
-      if ($(this).hasClass('all')) {
-        // "ALL"タブがクリックされた場合
-        $('.tab-contents').addClass('is-contents-active');
-      } else {
-        // 他のタブがクリックされた場合
-        $('.tab-contents').removeClass('is-contents-active');
-        $('.tab-contents').eq(index).addClass('is-contents-active');
-      }
-    });
-  });
-
-
-  $(function() {
-    let tabs = $(".page-navi__item"); // tabのクラスを全て取得し、変数tabsに配列で定義
-    $(".page-navi__item").on("click", function() { // tabをクリックしたらイベント発火
-      $(".is-active").removeClass("is-active"); // activeクラスを消す
-      $(this).addClass("is-active"); // クリックした箇所にactiveクラスを追加
-      // const index = tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
-      // $(".content").removeClass("show").eq(index).addClass("show"); // showクラスを消して、contentクラスのindex番目にshowクラスを追加
-    })
-  });
-
-    // 変数に要素を入れる
+  //モーダル
+  // 変数に要素を入れる
   var trigger = $('.js-modal-trigger'),
   wrapper = $('.modal__wrapper'),
   layer = $('.modal__layer'),
@@ -230,10 +199,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(function(){
     $(".archive__menu dt").on("click", function() {
       $(this).next().slideToggle();
-      $(".is-active").removeClass("is-active"); // activeクラスを消す
-      $(this).addClass("is-active"); // クリックした箇所にactiveクラスを追加
+      $(".archive__year.is-active").not(this).removeClass("is-active"); // activeクラスを全ての.yearから消す
+      $(this).toggleClass("is-active"); // クリックした箇所のactiveクラスを切り替える
     });
   });
+  
 
   // アコーディオン
   $(function () {

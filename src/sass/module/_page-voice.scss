@@ -14,18 +14,9 @@
 
 }
 
-.page-voice__items {
-  display: grid;
-  column-gap: rem(40);
-  row-gap: rem(40);
-  grid-template-columns: 1fr;
-  justify-items: center;
+.page-voice__nav {
+  margin-top: rem(80);
   @include mq('md') {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: rem(80);
+    margin-top: rem(72);
   }
-}
-
-.page-voice__item {
-  height: 100%;
 }

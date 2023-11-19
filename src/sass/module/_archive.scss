@@ -16,10 +16,12 @@
   font-weight: normal;
   line-height: normal;
   color: $main;
+  transition: .3s;
 }
 
 .archive__year:hover {
   opacity: .7;
+  cursor: pointer;
 }
 
 .archive__year::before {
@@ -33,10 +35,12 @@
   background-image: url(/assets/images/common/Polygon-right.png);
   background-repeat: no-repeat;
   background-size: contain;
+  transition: .3s;
 }
 
 .archive__year.is-active::before {
   background-image: url(/assets/images/common/Polygon-under.png);
+  transition: .3s;
 }
 
 .archive__lists {
@@ -56,10 +60,12 @@
   font-weight: normal;
   line-height: normal;
   color: $main;
+  transition: .3s;
 }
 
 .archive__list-item:hover {
   opacity: .7;
+  cursor: pointer;
 }
 
 .archive__list-item::before {
@@ -73,4 +79,5 @@
   background-image: url(/assets/images/common/Polygon-right.png);
   background-repeat: no-repeat;
   background-size: contain;
+  transition: .3s;
 }

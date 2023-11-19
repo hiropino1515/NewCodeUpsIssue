@@ -18,6 +18,12 @@
   background-image: url(/assets/images/common/page-nav-prev.png);
   background-repeat: no-repeat;
   background-size: cover;
+  transition: .3s;
+}
+
+.page-nav__arrow-left:hover {
+  cursor: pointer;
+  opacity: .7;
 }
 
 .page-nav__arrow-right {
@@ -26,6 +32,12 @@
   background-image: url(/assets/images/common/page-nav-next.png);
   background-repeat: no-repeat;
   background-size: cover;
+  transition: .3s;
+}
+
+.page-nav__arrow-right:hover {
+  cursor: pointer;
+  opacity: .7;
 }
 
 .page-nav__items {
@@ -34,7 +46,7 @@
   gap: rem(12);
 }
 
-.page-nav__item {
+.page-nav__item a {
   display: inline-block;
   padding-top: rem(10);
   padding-bottom: rem(10);
@@ -47,13 +59,16 @@
   font-weight: $bold;
   line-height: 1;
   text-align: center;
+  transition: .3s;
 }
 
-.page-nav__item:first-child {
-  margin-left: 0;
-}
-
-.page-nav__item.is-active {
+.page-nav__item.is-active a {
   color: $base;
   background-color: $main;
+}
+
+.page-nav__item a:hover {
+  color: $base;
+  background-color: $main;
+  cursor: pointer;
 }

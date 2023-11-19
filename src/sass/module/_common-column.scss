@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.common-column {
+
+}
+
+.common-column__inner {
+  max-width: rem(600);
+  @include mq('md') {
+    display: flex;
+    gap: rem(80);
+  }
+}
+
+.common-column__content {
+  @include mq('md') {
+    width: 64.8%;
+  }
+}
+
+.common-column__nav {
+  margin-top: rem(80);
+}
+
+.common-column__nav--single {
+  margin-top: rem(46);
+  padding-left: rem(24);
+  padding-right: rem(25);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.common-column__sidebar {
+  margin-top: rem(80);
+  @include mq('md') {
+    margin-top: 0;
+    width: 27.222%;
+  }
+}
