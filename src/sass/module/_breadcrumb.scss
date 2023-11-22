@@ -19,7 +19,7 @@
   left: calc(50% - min(48vw ,39rem));
   width: rem(120);
   height: rem(55);
-  z-index: 1;
+  z-index: -1;
   @include mq('md') {
     background-image: url(/assets/images/common/kingyohanadai.png);
     top: rem(102);

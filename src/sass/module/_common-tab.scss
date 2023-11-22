@@ -1,14 +1,10 @@
 @use "global" as *;
 
 .common-tab {
-
+  
 }
 
 .common-tab__inner {
-
-}
-
-.common-tab__list {
   display: grid;
   column-gap: rem(21);
   row-gap: rem(16);
@@ -46,9 +42,10 @@
   color: $base;
 }
 
-.common-tab__menu.is-active {
+.common-tab__menu.current {
   background-color: $main;
   color: $base;
+  cursor: default;
 }
 
 

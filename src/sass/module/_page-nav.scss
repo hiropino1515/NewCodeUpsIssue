@@ -1,52 +1,99 @@
 @use "global" as *;
 
-.page-nav__inner {
+.page-nav {
   min-width: rem(344);
   margin-left: auto;
   margin-right: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: rem(12);
   @include mq('md') {
     max-width: rem(444);
   }
 }
 
-.page-nav__arrow-left {
+.page-nav--single {
+  justify-content: center;
+}
+
+.page-nav__prev {
+  margin-right: rem(28);
+  display: block;
   width: rem(38);
   height: rem(38);
-  background-image: url(/assets/images/common/page-nav-prev.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: .3s;
+  border: 1px solid $main;
+  background-color: $base;
+  transition: all .3s;
+  position: relative;
 }
 
-.page-nav__arrow-left:hover {
+.page-nav__prev:hover {
   cursor: pointer;
-  opacity: .7;
+  background-color: $main;
 }
 
-.page-nav__arrow-right {
+.page-nav__prev::after {
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: rem(12);
+  height: rem(12);
+  border-left: 1px solid $main;
+  border-bottom: 1px solid $main;
+  transform: rotate(45deg);
+  transition: all .3s;
+}
+
+.page-nav__prev:hover::after {
+  border-left: 1px solid $base;
+  border-bottom: 1px solid $base;
+}
+
+.page-nav__next {
+  margin-left: rem(28);
+  display: block;
   width: rem(38);
   height: rem(38);
-  background-image: url(/assets/images/common/page-nav-next.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: .3s;
+  border: 1px solid $main;
+  background-color: $base;
+  transition: all .3s;
+  position: relative;
 }
 
-.page-nav__arrow-right:hover {
+.page-nav__next:hover {
   cursor: pointer;
-  opacity: .7;
+  background-color: $main;
 }
 
-.page-nav__items {
+.page-nav__next::after {
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: rem(12);
+  height: rem(12);
+  border-right: 1px solid $main;
+  border-top: 1px solid $main;
+  transform: rotate(45deg);
+  transition: all .3s;
+}
+
+.page-nav__next:hover::after {
+  border-right: 1px solid $base;
+  border-top: 1px solid $base;
+}
+.page-nav__pagers {
   display: flex;
   align-items: center;
   gap: rem(12);
 }
 
-.page-nav__item a {
+.page-nav__pager {
   display: inline-block;
   padding-top: rem(10);
   padding-bottom: rem(10);
@@ -62,12 +109,13 @@
   transition: .3s;
 }
 
-.page-nav__item.is-active a {
+.page-nav__pager.current {
   color: $base;
   background-color: $main;
+  cursor: default;
 }
 
-.page-nav__item a:hover {
+.page-nav__pager:hover {
   color: $base;
   background-color: $main;
   cursor: pointer;

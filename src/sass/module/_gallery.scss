@@ -9,90 +9,75 @@
 }
 
 .gallery__title {
-
+  
 }
 
-.gallery__modal {
+.gallery__wrapper {
   margin-top: rem(40);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(8);
   @include mq('md') {
     margin-top: rem(80);
+    grid-template-columns: repeat(11,1fr);
+    grid-auto-flow: dense;
   }
 }
 
-.gallery__slide-a img,
-.gallery__slide-f img {
+.gallery__slide {
+  cursor: pointer;
+}
+
+.gallery__slide:nth-child(6n+1) img,
+.gallery__slide:nth-child(6n) img {
   aspect-ratio: 345 / 523 ;
   height: 100%;
+  object-fit: cover;
   @include mq('md') {
     aspect-ratio: 492 / 746 ;
   }
 }
 
-.gallery__slide-b img,
-.gallery__slide-c img,
-.gallery__slide-d img,
-.gallery__slide-e img {
+.gallery__slide:nth-child(6n+2) img,
+.gallery__slide:nth-child(6n+3) img,
+.gallery__slide:nth-child(6n+4) img,
+.gallery__slide:nth-child(6n+5) img {
   aspect-ratio: 345 / 219 ;
   height: 100%;
+  object-fit: cover;
   @include mq('md') {
     aspect-ratio: 580 / 369 ;
   }
 }
 
-
-.gallery__slide-a {
+.gallery__slide:nth-child(6n+1),
+.gallery__slide:nth-child(6n) {
   @include mq('md') {
-    grid-area: A;
-  }
-}
-.gallery__slide-b {
-  @include mq('md') {
-    grid-area: B;
-  }
-}
-.gallery__slide-c {
-  @include mq('md') {
-    grid-area: C;
-  }
-}
-.gallery__slide-d {
-  @include mq('md') {
-    grid-area: D;
-  }
-}
-.gallery__slide-e {
-  @include mq('md') {
-    grid-area: E;
-  }
-}
-.gallery__slide-f {
-  @include mq('md') {
-    grid-area: F;
+    grid-row: span 2;
+    grid-column: span 5;
   }
 }
 
-.gallery__wrapper-top {
-  display: grid;
-  gap: rem(8);
+.gallery__slide:nth-child(6n+2),
+.gallery__slide:nth-child(6n+3),
+.gallery__slide:nth-child(6n+4),
+.gallery__slide:nth-child(6n+5) {
   @include mq('md') {
-    grid-template-areas:
-    "A B"
-    "A C";
-    grid-template-rows: 369px 369px;
-    grid-template-columns: calc(492 / 1080 * 100%) calc(580 / 1080 * 100%) ;
+    grid-row: span 1;
+    grid-column: span 6;
   }
 }
 
-.gallery__wrapper-bottom {
-  margin-top: rem(8);
-  display: grid;
-  gap: rem(8);
-  @include mq('md') {
-    grid-template-areas:
-    "D F"
-    "E F";
-    grid-template-rows: 369px 369px;
-    grid-template-columns: calc(580 / 1080 * 100%) calc(492 / 1080 * 100%) ;
-  }
-}
+// .gallery__wrapper-bottom {
+//   margin-top: rem(8);
+//   display: grid;
+//   gap: rem(8);
+//   @include mq('md') {
+//     grid-template-areas:
+//     "D F"
+//     "E F";
+//     grid-template-rows: 369px 369px;
+//     grid-template-columns: calc(580 / 1080 * 100%) calc(492 / 1080 * 100%) ;
+//   }
+// }
 
