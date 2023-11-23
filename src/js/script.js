@@ -147,8 +147,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   });
 
-  //モーダル
-  // 変数に要素を入れる
+  // モーダル
   var trigger = $('.js-modal-trigger'),
   wrapper = $('.modal__wrapper'),
   layer = $('.modal__layer'),
@@ -157,26 +156,32 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   content = $('.modal__content');
 
   // 『モーダルを開くボタン』をクリックしたら、『モーダル本体』を表示
-  $(trigger).click(function() {
-  $(wrapper).fadeIn(400);
+  $(trigger).click(function () {
+  // クリックされた画像のソースURLを取得
+  var imageUrl = $(this).find('img').attr('src');
 
-  // クリックした画像のHTML要素を取得して、置き換える
-  $(content).html($(this).prop('outerHTML'));
+  // モーダルのコンテンツに画像を表示
+  $(content).html('<img src="' + imageUrl + '" alt="拡大画像">');
 
   // スクロール位置を戻す
   $(container).scrollTop(0);
 
   // サイトのスクロールを禁止にする
   $('html, body').css('overflow', 'hidden');
+
+  // モーダルを表示
+  $(wrapper).fadeIn(400);
   });
 
   // 『背景』と『モーダルを閉じるボタン』をクリックしたら、『モーダル本体』を非表示
-  $(layer).add(close).click(function() {
-    $(wrapper).fadeOut(400);
+  $(layer).add(close).click(function () {
+  // モーダルを非表示
+  $(wrapper).fadeOut(400);
 
-    // サイトのスクロール禁止を解除する
-    $('html, body').removeAttr('style');
+  // サイトのスクロール禁止を解除する
+  $('html, body').removeAttr('style');
   });
+
 
   // informationタブメニュー
   $(function () {
@@ -249,20 +254,20 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       },
       messages: {
         name: {
-          required: '※必須項目が入力されていません。<br class="u-mobile">　入力してください.',
+          required: '※必須項目が入力されていません。<br class="u-mobile">入力してください。',
         },
         mail_address: {
-          required: '※必須項目が入力されていません。<br class="u-mobile">　入力してください.',
+          required: '※必須項目が入力されていません。<br class="u-mobile">入力してください。',
           email: '正しいメールアドレスの形式で入力してください.', // メールアドレスの形式エラーメッセージ
         },
         tel: {
-          required: '※必須項目が入力されていません。<br class="u-mobile">　入力してください.',
+          required: '※必須項目が入力されていません。<br class="u-mobile">入力してください。',
         },
         contents: {
-          required: '※必須項目が入力されていません。<br class="u-mobile">　入力してください.',
+          required: '※必須項目が入力されていません。<br class="u-mobile">入力してください。',
         },
         privacy: {
-          required: 'プライバシーポリシーに同意する必要があります.', // プライバシーポリシーの同意エラーメッセージ
+          required: 'プライバシーポリシーに同意する必要があります。', // プライバシーポリシーの同意エラーメッセージ
         }
       },
       errorPlacement: function (err, elem) {

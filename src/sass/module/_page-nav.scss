@@ -7,13 +7,10 @@
   display: flex;
   align-items: center;
   gap: rem(12);
+  justify-content: center;
   @include mq('md') {
     max-width: rem(444);
   }
-}
-
-.page-nav--single {
-  justify-content: center;
 }
 
 .page-nav__prev {
@@ -109,6 +106,12 @@
   transition: .3s;
 }
 
+.page-nav__pager--pc {
+  display: none;
+  @include mq('md') {
+    display: block;
+  }
+}
 .page-nav__pager.current {
   color: $base;
   background-color: $main;

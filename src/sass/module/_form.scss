@@ -370,18 +370,13 @@ textarea {
   }
 }
 
-.form__item-button {
+.form__item-button-container {
 	margin-top: rem(24);
-  text-align: center;
-  position: relative;
-
-  @include mq('md') {
-    margin-top: rem(42);
-  }
+	text-align: center;
 }
 
-.form__item-button-wrapper {
-	display: inline-block;
+.form__item-button {
+  display: inline-block;
   font-size: rem(14);
   font-family: $second-font-family;
   font-weight: $normal;
@@ -389,19 +384,17 @@ textarea {
   line-height: 1;
   background-color: $main;
   border: 1px solid $main;
-  padding: rem(20) 0;
-  max-width: rem(202);
-  width: 100%;
+  // max-width: rem(202);
+  // width: 100%;
   text-align: center;
   position: relative;
   z-index: 1;
+  @include mq('md') {
+    margin-top: rem(42);
+  }
 }
 
-.form__item-button-wrapper:disabled {
-  background-color: #b2b2b2;
-}
-
-.form__item-button-wrapper::after {
+.form__item-button::after {
 	content: "";
   position: absolute;
   background-color: $base;
@@ -415,21 +408,25 @@ textarea {
   z-index: -1;
 }
 
-.form__item-button-wrapper:hover {
+.form__item-button:hover {
 	[type=submit] {
 		color: $main;
 	}
+	&.form__item-button span::after {
+		border-bottom: 1px solid $main;
+  	border-right: 1px solid $main;
+	}
 }
 
-.form__item-button-wrapper:hover::after {
+.form__item-button:hover::after {
   transform: scale(1, 1);
 }
 
-.form__item-button-wrapper:hover::before {
+.form__item-button:hover::before {
   z-index: -1;
 }
 
-.form__item-button-wrapper::before {
+.form__item-button::before {
   content: "";
   position: absolute;
   top: rem(4);
@@ -440,9 +437,18 @@ textarea {
   z-index: -2;
 }
 
-.form__item-button-wrapper span {
+.form__item-button span {
   margin-left: rem(8);
-  display: inline-block;
+	position: relative;
+}
+
+.form__item-button span::after {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	top: 24%;
+	right: rem(64);
+	transform: translateY(-50%);
   width: rem(40);
   height: rem(6);
   border-bottom: 1px solid $base;
@@ -450,9 +456,15 @@ textarea {
   transform: skew(45deg);
 }
 
-.form__item-button-wrapper:hover span {
-  border-bottom: 1px solid $main;
-  border-right: 1px solid $main;
+.form__item-button span:hover::after {
+  cursor: pointer;
+}
+
+.form__item-button-submit {
+	padding-top: rem(20);
+  padding-bottom: rem(20);
+  padding-left: rem(56);
+  padding-right: rem(112);
 }
 
 .form__select {

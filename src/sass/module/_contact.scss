@@ -113,6 +113,16 @@
   }
 }
 
+.contact__tel {
+  cursor: pointer;
+  color: $main;
+  @include mq('md') {
+    pointer-events: none;
+    cursor: default;
+    color: #0D2936;
+  }
+}
+
 .contact__map {
   margin-top: rem(16);
   width: 100%;

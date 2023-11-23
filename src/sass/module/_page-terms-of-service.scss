@@ -24,8 +24,21 @@
   }
 }
 
-.page-terms-of-service__contents {
-  margin-top: rem(40);
+.page-terms-of-service__lead {
+  margin-top: rem(32);
+  color: $font;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 2;
+}
+
+.page-terms-of-service__container {
+  margin-top: rem(32);
+}
+
+.page-terms-of-service__text {
   color: $font;
   font-family: $base-font-family;
   font-size: rem(16);
@@ -38,4 +51,9 @@
   padding-left: rem(22);
   list-style-type: decimal;
   list-style-position: outside;
+  line-break: strict;
+}
+
+.page-terms-of-service__footer {
+  margin-top: rem(32);
 }
