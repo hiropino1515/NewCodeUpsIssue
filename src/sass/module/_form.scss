@@ -347,28 +347,34 @@ textarea {
   font-size: rem(14);
   font-weight: $normal;
   line-height: 1.57143;
-	position: relative;
-	left: rem(24);
-	margin: 0;
-	@include mq('md') {
-		left: 0;
-	}
+  position: relative;
+  left: rem(24);
+  margin: 0;
 
-  &::before {
-		content: "";
-    width: rem(22);
-    height: rem(22);
-  }
-
-  &::after {
-		content: "";
-		position: absolute;
-		top: rem(10) !important;
-		left: rem(1);
-    width: rem(16) !important;
-    height: rem(8) !important;
+  @include mq('md') {
+    left: 0;
   }
 }
+
+.form__item-agreement span::before,
+.form__item-agreement span::after {
+  content: "";
+  position: absolute;
+}
+
+.form__item-agreement span::before {
+  width: rem(22);
+  height: rem(22);
+}
+
+.form__item-agreement input[type="checkbox"] +  span::after {
+  top: rem(10);
+  left: rem(1);
+  width: rem(16);
+  height: rem(8);
+}
+
+
 
 .form__item-button-container {
 	margin-top: rem(24);

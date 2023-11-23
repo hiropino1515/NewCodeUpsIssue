@@ -29,7 +29,7 @@
   line-height: 1.5;
 }
 
-.section-header__entitle--blog {
+.section-header__entitle.section-header__entitle--blog {
   color: $font;
   @include mq('md') {
     color: $base;
@@ -43,7 +43,7 @@
   }
 }
 
-.section-header__jatitle--blog {
+.section-header__jatitle.section-header__jatitle--blog {
   margin-top: rem(4);
   color: $main;
   @include mq('md') {
@@ -52,8 +52,8 @@
   }
 }
 
-.section-header__entitle--contact {
-  font-size: rem(80) !important;
+.section-header__entitle.section-header__entitle--contact {
+  font-size: rem(80);
   line-height: 1;
 }
 
