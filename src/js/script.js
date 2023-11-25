@@ -267,7 +267,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
           required: '※必須項目が入力されていません。<br class="u-mobile">入力してください。',
         },
         privacy: {
-          required: 'プライバシーポリシーに同意する必要があります。', // プライバシーポリシーの同意エラーメッセージ
+          required: '※プライバシーポリシーに同意する必要があります。', // プライバシーポリシーの同意エラーメッセージ
         }
       },
       errorPlacement: function (err, elem) {
@@ -283,7 +283,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
           $('.form__error').show(); // エラーメッセージを表示
           $('.js-error').html(err);
         }
-      }
+      },
     });
 
     $('form').submit(function () {
@@ -292,12 +292,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         // フォームがバリデーションを通過しない場合
         $('.js-error').show(); // エラーメッセージを表示
         return false; // フォーム送信を阻止
-      }
-    });
-    $('form').submit(function () {
-      if (!$('form').valid()) {
-        return false;
+      } else if (!$('#form-privacy').is(':checked')) {
+        // プライバシーポリシーに同意していない場合
+        $('.js-error').show().html('※プライバシーポリシーに同意する必要があります。'); // エラーメッセージを表示
+        return false; // フォーム送信を阻止
       } else {
+        // フォームが正常にバリデーションを通過し、かつプライバシーポリシーに同意済みの場合
         window.location.href = "page-contact-thanks.html"; // 送信成功時にリダイレクト
         return false; // フォームの送信を阻止
       }

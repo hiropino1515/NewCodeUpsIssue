@@ -367,6 +367,7 @@ textarea {
   height: rem(22);
 }
 
+
 .form__item-agreement input[type="checkbox"] +  span::after {
   top: rem(10);
   left: rem(1);
@@ -499,6 +500,10 @@ textarea {
 	text-align: center;
 	margin-bottom: rem(40);
 	display: block;
+}
+
+.form__error label {
+	cursor: default;
 }
 
 .form__error-text {
