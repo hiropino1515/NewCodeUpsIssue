@@ -266,9 +266,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         contents: {
           required: '※必須項目が入力されていません。<br class="u-mobile">入力してください。',
         },
-        privacy: {
-          required: '※プライバシーポリシーに同意する必要があります。', // プライバシーポリシーの同意エラーメッセージ
-        }
       },
       errorPlacement: function (err, elem) {
         // エラーメッセージの表示場所とスタイリングをカスタマイズ
