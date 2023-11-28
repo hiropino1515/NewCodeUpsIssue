@@ -266,19 +266,22 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         contents: {
           required: '※必須項目が入力されていません。<br class="u-mobile">入力してください。',
         },
+        privacy: {
+          required: '※プライバシーポリシーに同意する必要があります。',
+        },
       },
       errorPlacement: function (err, elem) {
         // エラーメッセージの表示場所とスタイリングをカスタマイズ
         if (elem.attr('name') === 'privacy') {
-          // プライバシーポリシーのチェックボックスの場合、エラーメッセージをその要素の隣に表示
-          err.insertAfter(elem);
-          // エラーがある場合、placeholderの色を白に変更
-          elem.css('color', 'white');
+            // プライバシーポリシーのチェックボックスの場合、エラーメッセージをその要素の隣に表示
+            err.insertAfter(elem);
+            // エラーがある場合、placeholderの色を白に変更
+            elem.css('color', 'white');
         } else {
-          // その他の要素は通常通り表示
-          elem.addClass('js-invalid');
-          $('.form__error').show(); // エラーメッセージを表示
-          $('.js-error').html(err);
+            // その他の要素は通常通り表示
+            elem.addClass('js-invalid');
+            $('.form__error').show(); // エラーメッセージを表示
+            $('.js-error').html(err);
         }
       },
     });

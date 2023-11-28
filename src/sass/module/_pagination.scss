@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.page-nav {
+.pagination {
   min-width: rem(344);
   margin-left: auto;
   margin-right: auto;
@@ -13,7 +13,7 @@
   }
 }
 
-.page-nav__prev {
+.pagination__prev {
   margin-right: rem(28);
   display: block;
   width: rem(38);
@@ -24,12 +24,12 @@
   position: relative;
 }
 
-.page-nav__prev:hover {
+.pagination__prev:hover {
   cursor: pointer;
   background-color: $main;
 }
 
-.page-nav__prev::after {
+.pagination__prev::after {
   content: "";
   position: absolute;
   top: 34%;
@@ -44,12 +44,12 @@
   transition: all .3s;
 }
 
-.page-nav__prev:hover::after {
+.pagination__prev:hover::after {
   border-left: 1px solid $base;
   border-bottom: 1px solid $base;
 }
 
-.page-nav__next {
+.pagination__next {
   margin-left: rem(28);
   display: block;
   width: rem(38);
@@ -60,12 +60,12 @@
   position: relative;
 }
 
-.page-nav__next:hover {
+.pagination__next:hover {
   cursor: pointer;
   background-color: $main;
 }
 
-.page-nav__next::after {
+.pagination__next::after {
   content: "";
   position: absolute;
   top: 34%;
@@ -80,17 +80,17 @@
   transition: all .3s;
 }
 
-.page-nav__next:hover::after {
+.pagination__next:hover::after {
   border-right: 1px solid $base;
   border-top: 1px solid $base;
 }
-.page-nav__pagers {
+.pagination__pagers {
   display: flex;
   align-items: center;
   gap: rem(12);
 }
 
-.page-nav__pager {
+.pagination__pager {
   display: inline-block;
   padding-top: rem(10);
   padding-bottom: rem(10);
@@ -106,19 +106,19 @@
   transition: .3s;
 }
 
-.page-nav__pager--pc {
+.pagination__pager--pc {
   display: none;
   @include mq('md') {
     display: block;
   }
 }
-.page-nav__pager.current {
+.pagination__pager.current {
   color: $base;
   background-color: $main;
   cursor: default;
 }
 
-.page-nav__pager:hover {
+.pagination__pager:hover {
   color: $base;
   background-color: $main;
   cursor: pointer;
