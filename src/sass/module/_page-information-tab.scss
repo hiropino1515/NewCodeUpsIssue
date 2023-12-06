@@ -117,6 +117,20 @@
 
 .page-information-tab__menu:hover {
   cursor: pointer;
+  background-color: $main;
+  color: $base;
+}
+
+.page-information-tab__menu:hover:first-child::before {
+  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon.png);
+}
+
+.page-information-tab__menu:hover:nth-child(2)::before {
+  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon.png);
+}
+
+.page-information-tab__menu:hover:last-child::before {
+  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon.png);
 }
 
 .page-information-tab__content-group {
