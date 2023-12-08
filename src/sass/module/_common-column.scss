@@ -9,6 +9,7 @@
   @include mq('md') {
     display: flex;
     gap: rem(80);
+    justify-content: space-between;
   }
 }
 
