@@ -204,11 +204,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(function(){
     $(".archive__menu dt").on("click", function() {
       $(this).next().slideToggle();
-      $(".archive__year.is-active").not(this).removeClass("is-active"); // activeクラスを全ての.yearから消す
       $(this).toggleClass("is-active"); // クリックした箇所のactiveクラスを切り替える
     });
   });
-  
+
 
   // アコーディオン
   $(function () {
