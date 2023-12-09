@@ -180,9 +180,9 @@
     <div class="page-information-tab layout-page-information-tab">
       <div class="page-information-tab__inner inner">
         <ul class="page-information-tab__list">
-          <li class="page-information-tab__menu js-tab current">ライセンス<br class="u-mobile">講習</li>
-          <li class="page-information-tab__menu js-tab">ファン<br class="u-mobile">ダイビング</li>
-          <li class="page-information-tab__menu js-tab">体験<br class="u-mobile">ダイビング</li>
+          <li class="page-information-tab__menu js-tab current" data-tab="license">ライセンス<br class="u-mobile">講習</li>
+          <li class="page-information-tab__menu js-tab" data-tab="fundiving">ファン<br class="u-mobile">ダイビング</li>
+          <li class="page-information-tab__menu js-tab" data-tab="diving">体験<br class="u-mobile">ダイビング</li>
         </ul>
         <div class="page-information-tab__content-group">
           <div class="page-information-tab__content-box page-information-card js-content">
@@ -285,7 +285,7 @@
           <li class="global-nav__item">
             <a href="page-campaign.html">キャンペーン</a>
             <ul>
-              <li><a href="page-campaign.html">ライセンス取得</a></li>
+              <li><a href="page-campaign.html?tab=license">ライセンス取得</a></li>
               <li><a href="page-campaign.html">貸切体験ダイビング</a></li>
               <li><a href="page-campaign.html">ナイトダイビング</a></li>
             </ul>
@@ -296,9 +296,9 @@
           <li class="global-nav__item">
             <a href="page-information.html">ダイビング情報</a>
             <ul>
-              <li><a href="page-information.html">ライセンス講習</a></li>
-              <li><a href="page-information.html">体験ダイビング</a></li>
-              <li><a href="page-information.html">ファンダイビング</a></li>
+              <li><a href="page-information.html?tab=license"  data-target="#tab-license">ライセンス講習</a></li>
+              <li><a href="page-information.html?tab=diving" data-target="#tab-diving">体験ダイビング</a></li>
+              <li><a href="page-information.html?tab=fundiving" data-target="#tab-fundiving">ファンダイビング</a></li>
             </ul>
           </li>
           <li class="global-nav__item">

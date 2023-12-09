@@ -198,9 +198,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       // クリックしたタブのインデックス番号と同じコンテンツを表示
       $(".js-content").hide().eq(index).fadeIn(800);
     });
+
+    // URLからクエリパラメータを取得
+    const targetTab = new URLSearchParams(window.location.search).get('tab');
+
+    // クエリパラメータが存在する場合は、該当のタブを表示する
+    if (targetTab) {
+      const targetElement = document.querySelector(`[data-tab="${targetTab}"]`);
+      targetElement?.click(); // Optional chainingを使用してクリックイベントを実行
+    }
   });
-
-
 
   // アーカイブメニュー
   $(function(){
