@@ -5,6 +5,10 @@
 }
 
 .common-tab__inner {
+  
+}
+
+.common-tab__lists {
   display: grid;
   column-gap: rem(21);
   row-gap: rem(16);
@@ -18,7 +22,7 @@
   }
 }
 
-.common-tab__menu {
+.common-tab__list {
   display: inline-block;
   font-size: rem(14);
   font-family: $second-font-family;
@@ -36,13 +40,13 @@
   transition: .3s;
 }
 
-.common-tab__menu:hover {
+.common-tab__list:hover {
   cursor: pointer;
   background-color: $main;
   color: $base;
 }
 
-.common-tab__menu.current {
+.common-tab__list.current {
   background-color: $main;
   color: $base;
   cursor: default;
