@@ -78,6 +78,7 @@
   height: 100%;
   background: rgba(32, 32, 32, 0.80);
   cursor: pointer;
+  z-index: 1001;
 }
 
 .gallery__overlay img {
