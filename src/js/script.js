@@ -148,40 +148,18 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // モーダル
-  var trigger = $('.js-modal-trigger'),
-  wrapper = $('.modal__wrapper'),
-  layer = $('.modal__layer'),
-  container = $('.modal__container'),
-  close = $('.modal__close'),
-  content = $('.modal__content');
 
-  // 『モーダルを開くボタン』をクリックしたら、『モーダル本体』を表示
-  $(trigger).click(function () {
-  // クリックされた画像のソースURLを取得
-  var imageUrl = $(this).find('img').attr('src');
-
-  // モーダルのコンテンツに画像を表示
-  $(content).html('<img src="' + imageUrl + '" alt="拡大画像">');
-
-  // スクロール位置を戻す
-  $(container).scrollTop(0);
-
-  // サイトのスクロールを禁止にする
-  $('html, body').css('overflow', 'hidden');
-
-  // モーダルを表示
-  $(wrapper).fadeIn(400);
+  jQuery(".js-modal-trigger").on("click", function() {
+    var imageHtml = jQuery(this).find("img").prop("outerHTML");
+    jQuery(".gallery__overlay").html(imageHtml);
+    jQuery(".gallery__overlay").fadeIn(400);
+    jQuery('html, body').css('overflow', 'hidden');
   });
 
-  // 『背景』と『モーダルを閉じるボタン』をクリックしたら、『モーダル本体』を非表示
-  $(layer).add(close).click(function () {
-  // モーダルを非表示
-  $(wrapper).fadeOut(400);
-
-  // サイトのスクロール禁止を解除する
-  $('html, body').removeAttr('style');
+  jQuery(".gallery__overlay").on("click", function() {
+    jQuery(".gallery__overlay").fadeOut(400);
+    jQuery('html, body').removeAttr('style');
   });
-
 
   // informationタブメニュー
   $(function () {

@@ -68,16 +68,26 @@
   }
 }
 
-// .gallery__wrapper-bottom {
-//   margin-top: rem(8);
-//   display: grid;
-//   gap: rem(8);
-//   @include mq('md') {
-//     grid-template-areas:
-//     "D F"
-//     "E F";
-//     grid-template-rows: 369px 369px;
-//     grid-template-columns: calc(580 / 1080 * 100%) calc(492 / 1080 * 100%) ;
-//   }
-// }
+.gallery__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  background: rgba(32, 32, 32, 0.80);
+  cursor: pointer;
+}
 
+.gallery__overlay img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
