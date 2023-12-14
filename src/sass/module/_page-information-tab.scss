@@ -47,7 +47,7 @@
   transform: translateY(-50%);
   width: rem(63);
   height: rem(63);
-  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon2.png);
+  background-image: url(../images/common/animal_aquatic_nature_ocean_sea_icon2.png);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 3;
@@ -66,7 +66,7 @@
   transform: translateY(-50%);
   width: rem(63);
   height: rem(63);
-  background-image: url(/assets/images/common/fish_nature_ocean_sea_shark_icon.png);
+  background-image: url(../images/common/fish_nature_ocean_sea_shark_icon.png);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 3;
@@ -85,7 +85,7 @@
   transform: translateY(-50%);
   width: rem(63);
   height: rem(63);
-  background-image: url(/assets/images/common/fish_ocean_project_sea_seafood_icon.png);
+  background-image: url(../images/common/fish_ocean_project_sea_seafood_icon.png);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 3;
@@ -108,7 +108,7 @@
   transform: translateY(-50%);
   width: rem(63);
   height: rem(63);
-  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon.png);
+  background-image: url(../images/common/animal_aquatic_nature_ocean_sea_icon.png);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 3;
@@ -122,15 +122,15 @@
 }
 
 .page-information-tab__menu:hover:first-child::before {
-  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon.png);
+  background-image: url(../images/common/animal_aquatic_nature_ocean_sea_icon.png);
 }
 
 .page-information-tab__menu:hover:nth-child(2)::before {
-  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon.png);
+  background-image: url(../images/common/animal_aquatic_nature_ocean_sea_icon.png);
 }
 
 .page-information-tab__menu:hover:last-child::before {
-  background-image: url(/assets/images/common/animal_aquatic_nature_ocean_sea_icon.png);
+  background-image: url(../images/common/animal_aquatic_nature_ocean_sea_icon.png);
 }
 
 .page-information-tab__content-group {

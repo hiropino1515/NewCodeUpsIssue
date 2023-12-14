@@ -32,14 +32,14 @@
   left: 0;
   width: rem(24);
   height: rem(24);
-  background-image: url(/assets/images/common/Polygon-right.png);
+  background-image: url(../images/common/Polygon-right.png);
   background-repeat: no-repeat;
   background-size: contain;
   transition: .3s;
 }
 
 .archive__year.is-active::before {
-  background-image: url(/assets/images/common/Polygon-under.png);
+  background-image: url(../images/common/Polygon-under.png);
   transition: .3s;
 }
 
@@ -76,7 +76,7 @@
   left: rem(24);
   width: rem(24);
   height: rem(24);
-  background-image: url(/assets/images/common/Polygon-right.png);
+  background-image: url(../images/common/Polygon-right.png);
   background-repeat: no-repeat;
   background-size: contain;
   transition: .3s;
