@@ -1,7 +1,6 @@
 @use "global" as *;
 
-.pagination {
-  min-width: rem(344);
+.wp-pagenavi {
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -13,84 +12,7 @@
   }
 }
 
-.pagination__prev {
-  margin-right: rem(28);
-  display: block;
-  width: rem(38);
-  height: rem(38);
-  border: 1px solid $main;
-  background-color: $base;
-  transition: all .3s;
-  position: relative;
-}
-
-.pagination__prev:hover {
-  cursor: pointer;
-  background-color: $main;
-}
-
-.pagination__prev::after {
-  content: "";
-  position: absolute;
-  top: 34%;
-  left: 42%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: rem(12);
-  height: rem(12);
-  border-left: 1px solid $main;
-  border-bottom: 1px solid $main;
-  transform: rotate(45deg);
-  transition: all .3s;
-}
-
-.pagination__prev:hover::after {
-  border-left: 1px solid $base;
-  border-bottom: 1px solid $base;
-}
-
-.pagination__next {
-  margin-left: rem(28);
-  display: block;
-  width: rem(38);
-  height: rem(38);
-  border: 1px solid $main;
-  background-color: $base;
-  transition: all .3s;
-  position: relative;
-}
-
-.pagination__next:hover {
-  cursor: pointer;
-  background-color: $main;
-}
-
-.pagination__next::after {
-  content: "";
-  position: absolute;
-  top: 34%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: rem(12);
-  height: rem(12);
-  border-right: 1px solid $main;
-  border-top: 1px solid $main;
-  transform: rotate(45deg);
-  transition: all .3s;
-}
-
-.pagination__next:hover::after {
-  border-right: 1px solid $base;
-  border-top: 1px solid $base;
-}
-.pagination__pagers {
-  display: flex;
-  align-items: center;
-  gap: rem(12);
-}
-
-.pagination__pager {
+.wp-pagenavi a,.wp-pagenavi span {
   display: inline-block;
   padding-top: rem(10);
   padding-bottom: rem(10);
@@ -106,20 +28,90 @@
   transition: .3s;
 }
 
-.pagination__pager--pc {
-  display: none;
-  @include mq('md') {
-    display: block;
-  }
+.wp-pagenavi a:hover {
+  color: $base;
+  background-color: $main;
+  cursor: pointer;
 }
-.pagination__pager.current {
+
+.wp-pagenavi span.current {
   color: $base;
   background-color: $main;
   cursor: default;
 }
 
-.pagination__pager:hover {
-  color: $base;
-  background-color: $main;
+.page.page--pc {
+  display: none;
+}
+
+.previouspostslink {
+  margin-right: rem(28);
+  display: block;
+  width: rem(38);
+  height: rem(38);
+  border: 1px solid $main;
+  background-color: $base;
+  transition: all .3s;
+  position: relative;
+}
+
+.previouspostslink:hover {
   cursor: pointer;
+  background-color: $main;
+}
+
+.previouspostslink::after {
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: rem(12);
+  height: rem(12);
+  border-left: 1px solid $main;
+  border-bottom: 1px solid $main;
+  transform: rotate(45deg);
+  transition: all .3s;
+}
+
+.previouspostslink:hover::after {
+  border-left: 1px solid $base;
+  border-bottom: 1px solid $base;
+}
+
+.nextpostslink {
+  margin-left: rem(28);
+  display: block;
+  width: rem(38);
+  height: rem(38);
+  border: 1px solid $main;
+  background-color: $base;
+  transition: all .3s;
+  position: relative;
+}
+
+.nextpostslink:hover {
+  cursor: pointer;
+  background-color: $main;
+}
+
+.nextpostslink::after {
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: rem(12);
+  height: rem(12);
+  border-right: 1px solid $main;
+  border-top: 1px solid $main;
+  transform: rotate(45deg);
+  transition: all .3s;
+}
+
+.nextpostslink:hover::after {
+  border-right: 1px solid $base;
+  border-top: 1px solid $base;
 }

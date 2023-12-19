@@ -17,16 +17,19 @@
 
 }
 
-.common-column__pagination {
-  margin-top: rem(80);
-}
-
-.common-column__pagination--single {
+.common-column__page-link {
   margin-top: rem(46);
   padding-left: rem(24);
   padding-right: rem(25);
   @include mq('md') {
     margin-top: rem(80);
+  }
+}
+
+.common-column__pagenavi {
+  margin-top: rem(80);
+  @include mq('md') {
+    margin-top: rem(72);
   }
 }
 

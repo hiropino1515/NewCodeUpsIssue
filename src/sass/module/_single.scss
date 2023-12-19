@@ -25,14 +25,14 @@
   }
 }
 
-.single__eye-catch {
+.single__image {
   margin-top: rem(24);
   @include mq('md') {
     margin-top: rem(32);
   }
 }
 
-.single__eye-catch img {
+.single__image img {
   aspect-ratio: 345 / 231;
   object-fit: cover;
   @include mq('md') {
@@ -40,7 +40,7 @@
   }
 }
 
-.single img {
+.single__content img {
   margin-top: rem(24);
   aspect-ratio: 345 / 231;
   object-fit: cover;
@@ -50,7 +50,7 @@
   }
 }
 
-.single p {
+.single__content p {
   margin-top: rem(24);
   font-family: $base-font-family;
   font-size: rem(16);
@@ -62,14 +62,14 @@
   }
 }
 
-.single ul {
+.single__content ul {
   margin-top: rem(24);
   @include mq('md') {
     margin-top: rem(32);
   }
 }
 
-.single li {
+.single__content li {
   padding-left: rem(27);
   font-family: $base-font-family;
   font-size: rem(16);
@@ -79,7 +79,7 @@
   position: relative;
 }
 
-.single li::before {
+.single__content li::before {
   content: "";
   position: absolute;
   top: 50%;
