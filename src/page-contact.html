@@ -184,69 +184,67 @@
             <p class="form__error-text js-error"></p>
           </div>
           <form action="page-contact-thanks.html" method="post" id="js-contactForm">
-            <dl>
-              <div class="form__item">
-                <dt>
-                  お名前<span>必須</span>
-                </dt>
-                <dd>
-                  <input class="required" type="text" name="name" id="" placeholder="沖縄　太郎" value="" required />
-                </dd>
-              </div>
-              <div class="form__item">
-                <dt>
-                  メールアドレス<span>必須</span>
-                </dt>
-                <dd>
-                  <input class="required" type="email" name="mail_address" id="email" placeholder="aaa000@ggmail.com" value="" required />
-                </dd>
-              </div>
-              <div class="form__item">
-                <dt>
-                  電話番号<span>必須</span>
-                </dt>
-                <dd>
-                  <input class="required" type="tel" name="tel" id="tel" placeholder="000-0000-0000" value="" required />
-                </dd>
-              </div>
-              <div class="form__item">
-                <dt>
-                  お問合せ項目<span>必須</span>
-                </dt>
-                <dd class="required form__checkbox">
-                  <label><input type="checkbox" name="check" value="チェックボックス1" checked/><span>ダイビング講習について</span></label>
-                  <label><input type="checkbox" name="check" value="チェックボックス2" /><span>ファンデイビングについて</span></label>
-                  <label><input type="checkbox" name="check" value="チェックボックス3" /><span>体験ダイビングについて</span></label>
-                </dd>
-              </div>
-              <div class="form__item">
-                <dt>
-                  キャンペーン
-                </dt>
-                <dd class="form__select">
-                  <select name="select" class="" >
-                    <option value="" >キャンペーン内容を選択</option>
-                    <option value="セレクト1">ライセンス取得</option>
-                    <option value="セレクト2">ファンダイビング</option>
-                    <option value="セレクト3">体験ダイビング</option>
-                  </select>
-                </dd>
-              </div>
-              <div class="form__item">
-                <dt>
-                  お問合せ内容<span>必須</span>
-                </dt>
-                <dd>
-                  <textarea class="required" name="contents" id="contents" required></textarea>
-                </dd>
-              </div>
+            <dl class="form__item">
+              <dt>
+                お名前<span>必須</span>
+              </dt>
+              <dd>
+                <input class="required" type="text" name="name" id="" placeholder="沖縄　太郎" value="" required />
+              </dd>
+            </dl>
+            <dl class="form__item">
+              <dt>
+                メールアドレス<span>必須</span>
+              </dt>
+              <dd>
+                <input class="required" type="email" name="mail_address" id="email" placeholder="aaa000@ggmail.com" value="" required />
+              </dd>
+            </dl>
+            <dl class="form__item">
+              <dt>
+                電話番号<span>必須</span>
+              </dt>
+              <dd>
+                <input class="required" type="tel" name="tel" id="tel" placeholder="000-0000-0000" value="" required />
+              </dd>
+            </dl>
+            <dl class="form__item">
+              <dt>
+                お問合せ項目<span>必須</span>
+              </dt>
+              <dd class="required form__checkbox">
+                <label><input type="checkbox" name="check" value="チェックボックス1" checked/><span>ダイビング講習について</span></label>
+                <label><input type="checkbox" name="check" value="チェックボックス2" /><span>ファンデイビングについて</span></label>
+                <label><input type="checkbox" name="check" value="チェックボックス3" /><span>体験ダイビングについて</span></label>
+              </dd>
+            </dl>
+            <dl class="form__item">
+              <dt>
+                キャンペーン
+              </dt>
+              <dd class="form__select">
+                <select name="select" class="" >
+                  <option value="" >キャンペーン内容を選択</option>
+                  <option value="セレクト1">ライセンス取得</option>
+                  <option value="セレクト2">ファンダイビング</option>
+                  <option value="セレクト3">体験ダイビング</option>
+                </select>
+              </dd>
+            </dl>
+            <dl class="form__item">
+              <dt>
+                お問合せ内容<span>必須</span>
+              </dt>
+              <dd>
+                <textarea class="required" name="contents" id="contents" required></textarea>
+              </dd>
             </dl>
             <div class="form__item-agreement">
               <label><input id="form-privacy" type="checkbox" name="privacy" value="チェックボックス" class="required"/><span>個人情報の取り扱いについて同意のうえ<br class="u-mobile">送信します。</span></label>
             </div>
             <div class="form__item-button-container">
               <div class="form__item-button">
-                <input class="form__item-button-submit" id="form-submit" type="submit" value="Send" /><span></span>
+                <input id="form-submit" type="submit" value="Send" /><span></span>
               </div>
             </div>
           </form>

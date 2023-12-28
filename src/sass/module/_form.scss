@@ -97,6 +97,10 @@ button,
 	border-radius: 0;
 	/*↓カスタム */
 	color: $base;
+	padding-top: rem(20);
+  padding-bottom: rem(20);
+  padding-left: rem(56);
+  padding-right: rem(112);
 }
 
 [type="checkbox"] {
@@ -465,13 +469,6 @@ textarea {
 
 .form__item-button span:hover::after {
   cursor: pointer;
-}
-
-.form__item-button-submit {
-	padding-top: rem(20);
-  padding-bottom: rem(20);
-  padding-left: rem(56);
-  padding-right: rem(112);
 }
 
 .form__select {
