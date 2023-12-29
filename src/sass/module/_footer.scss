@@ -46,11 +46,11 @@
   opacity: .6;
 }
 
-.footer__sp-nav {
+.footer__nav {
 
 }
 
-.footer__sp-nav-items {
+.footer__nav-items {
   margin-top: rem(24);
   column-count: 2;
   column-gap: rem(12);
@@ -61,7 +61,7 @@
   }
 }
 
-.footer__sp-nav-item {
+.footer__nav-item {
   padding-left: rem(22);
   background: url(../images/common/hitode.png);
   background-repeat: no-repeat;
@@ -69,7 +69,7 @@
   background-position: 0 rem(20);
 }
 
-.footer__sp-nav-item a {
+.footer__nav-item a {
   text-align: left;
   display: block;
   font-size: rem(16);
@@ -80,11 +80,11 @@
   padding: rem(20) 0;
 }
 
-.footer__sp-nav-item a:hover {
+.footer__nav-item a:hover {
   opacity: .6;
 }
 
-.footer__sp-nav-item ul li a {
+.footer__nav-item ul li a {
   text-align: left;
   display: block;
   font-size: rem(16);
