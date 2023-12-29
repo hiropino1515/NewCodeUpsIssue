@@ -9,6 +9,10 @@
   color: $font;
 }
 
+.breadcrumb.breadcrumb--page-404 {
+  color: $base;
+}
+
 .breadcrumb::after {
   content: '';
   position: absolute;
@@ -32,4 +36,8 @@
   @include mq('md') {
     background-image: none;
   }
+}
+
+.breadcrumb--page-404::after {
+  background-image: none;
 }
